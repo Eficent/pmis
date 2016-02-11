@@ -1,0 +1,229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* progress_measurement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 13:57+0100\n"
+"PO-Revision-Date: 2016-02-10 14:15+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,active:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: progress_measurement
+#: field:progress.measurement,communication_date_print:0
+msgid "Communication Date"
+msgstr "Kommunikationsdatum"
+
+#. module: progress_measurement
+#: field:progress.measurement,communication_date:0
+msgid "Communication date"
+msgstr "Kommunikationsdatum"
+
+#. module: progress_measurement
+#: field:progress.measurement,create_uid:0
+#: field:progress.measurement.type,create_uid:0
+msgid "Created by"
+msgstr "Angelegt durch"
+
+#. module: progress_measurement
+#: field:progress.measurement,create_date:0
+#: field:progress.measurement.type,create_date:0
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: progress_measurement
+#: help:progress.measurement,communication_date:0
+msgid "Date when the measurement was communicated"
+msgstr "Datum, an dem die Messung mitgeteilt wurde"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,default_max_value:0
+msgid "Default Maximum Value"
+msgstr "Vorgabehöchstwert"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,is_default:0
+msgid "Default measurement type"
+msgstr "Vorgabe-Messmethode"
+
+#. module: progress_measurement
+#: model:ir.actions.act_window,help:progress_measurement.action_progress_measurement_type_tree
+msgid "Define the Progress Measurement Types."
+msgstr "Die Fortschrittsgradmessmethoden festlegen."
+
+#. module: progress_measurement
+#: field:progress.measurement,name:0
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: progress_measurement
+#: help:progress.measurement,name:0
+msgid "Description given to the measure"
+msgstr "Beschreibung der Messung"
+
+#. module: progress_measurement
+#: field:progress.measurement,user_id:0
+msgid "Entered by"
+msgstr "Eingepflegt durch"
+
+#. module: progress_measurement
+#: constraint:progress.measurement.type:0
+msgid "Error! Default maximum value must be greater than precision value"
+msgstr "Fehler: Vorgabehöchstwert muss größer als der Bestimmungswert sein"
+
+#. module: progress_measurement
+#: constraint:progress.measurement.type:0
+msgid "Error! The maximum percentage must not exceed 100"
+msgstr "Fehler: Der prozentualte Höchstwert darf 100 nicht überschreiten"
+
+#. module: progress_measurement
+#: constraint:progress.measurement.type:0
+msgid "Error! The maximum value must be greater than 0"
+msgstr "Fehler: Der Höchstwert muss größer 0 sein"
+
+#. module: progress_measurement
+#: constraint:progress.measurement.type:0
+msgid "Error! The precision value must be greater than 0"
+msgstr "Fehler: Der Feinheitsgrad muss größer als 0 sein"
+
+#. module: progress_measurement
+#: constraint:progress.measurement:0
+msgid ""
+"Error! The value is entered in a higher precision to thatdefined in the "
+"progress measurement type"
+msgstr ""
+"Fehler: Der Wert wurde mit höherer Genauigkeit eingegeben, als für die FG-"
+"Messung festgelegt"
+
+#. module: progress_measurement
+#: constraint:progress.measurement:0
+msgid ""
+"Error! The value must be less than the maximum permitted defined in the "
+"progress measurement type"
+msgstr ""
+"Fehler: Der Wert muss kleiner sein, als der für die FG-Messung bestimmte "
+"Höchstwert"
+
+#. module: progress_measurement
+#: field:progress.measurement,id:0 field:progress.measurement.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,is_percent:0
+msgid ""
+"Indicates that progress measurements of this type are entered on a percent "
+"basis"
+msgstr ""
+"Zeigt an, dass die Fortschrittsgradmessung dieser Art in Prozent angegeben "
+"wird"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,is_default:0
+msgid "Indicates that this progress measurements is to be used by default"
+msgstr ""
+"Zeigt an, dass diese Fortschrittsgradmessung als Vorgabe verwendet wird"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,active:0
+msgid "Indicates that this type of progress can be used"
+msgstr "Zeigt an, dass diese Art des Fortschritt verwendet werden kann"
+
+#. module: progress_measurement
+#: field:progress.measurement,write_uid:0
+#: field:progress.measurement.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: progress_measurement
+#: field:progress.measurement,write_date:0
+#: field:progress.measurement.type,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,default_max_value:0
+msgid ""
+"Maximum value that is permitted for the object being measured as a total "
+"measure of progress."
+msgstr ""
+"Höchstwert, der für das zu bemessende Objekt zur Messung des "
+"Gesamtfortschritts, zugelassen ist."
+
+#. module: progress_measurement
+#: model:ir.actions.act_window,name:progress_measurement.action_progress_measurement_type_tree
+#: model:ir.ui.menu,name:progress_measurement.menu_progress_measurement_type_view
+msgid "Measurement Types"
+msgstr "Bemessungsarten"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,name:0
+msgid "Name"
+msgstr "Bezeichnung"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,name:0
+msgid "Name given to the progress measurement type"
+msgstr "Bezeichnung der Art der Fortschrittsgradmessung"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,is_percent:0
+msgid "Percentage"
+msgstr "Prozentsatz"
+
+#. module: progress_measurement
+#: field:progress.measurement.type,precision:0
+msgid "Precision"
+msgstr "Feinheit"
+
+#. module: progress_measurement
+#: model:ir.model,name:progress_measurement.model_progress_measurement
+#: model:ir.ui.menu,name:progress_measurement.menu_progress_measurement_config
+msgid "Progress Measurement"
+msgstr "Fortschrittsgradmessung"
+
+#. module: progress_measurement
+#: model:ir.model,name:progress_measurement.model_progress_measurement_type
+#: field:progress.measurement,progress_measurement_type:0
+#: view:progress.measurement.type:progress_measurement.view_progress_measurement_type_edit
+#: view:progress.measurement.type:progress_measurement.view_progress_measurement_type_search
+#: view:progress.measurement.type:progress_measurement.view_progress_measurement_type_tree
+msgid "Progress Measurement Type"
+msgstr "Art der Fortschrittsgradmessung"
+
+#. module: progress_measurement
+#: sql_constraint:progress.measurement.type:0
+msgid "Progress type name already exists"
+msgstr "Bezeichnung der Fortschrittsart besteht bereits"
+
+#. module: progress_measurement
+#: field:progress.measurement,value:0
+msgid "Value"
+msgstr "Wert"
+
+#. module: progress_measurement
+#: help:progress.measurement.type,precision:0
+msgid ""
+"Value of increments permitted for the given progress measurement type "
+"measured as a total measure of progress."
+msgstr ""
+"Wert der zulässigen Inkremente für gegebene Arten der "
+"Fortschrittsgradmessung zur Messung des Gesamtfortschritts."
+
+#. module: progress_measurement
+#: help:progress.measurement,value:0
+msgid "Value of the measure"
+msgstr "Messwert"

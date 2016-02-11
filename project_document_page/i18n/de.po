@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_document_page
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 15:06+0100\n"
+"PO-Revision-Date: 2016-02-10 15:07+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: project_document_page
+#: field:project.project,page_ids:0 field:project.task,page_ids:0
+msgid "Document pages"
+msgstr "Dokumentseiten"
+
+#. module: project_document_page
+#: view:project.task:project_document_page.view_task_form_wiki
+msgid "Extra Info"
+msgstr "Zusatzinfo"
+
+#. module: project_document_page
+#: view:project.project:project_document_page.edit_project_document
+#: view:project.task:project_document_page.view_task_form_wiki
+msgid "Knowledge"
+msgstr "Wissen"
+
+#. module: project_document_page
+#: model:ir.model,name:project_document_page.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_document_page
+#: view:project.project:project_document_page.edit_project_document
+msgid "Project Stages"
+msgstr "Projektstufen"
+
+#. module: project_document_page
+#: model:ir.model,name:project_document_page.model_project_task
+msgid "Task"
+msgstr "Aufgabe"
