@@ -1,0 +1,262 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request_to_requisition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-12 15:26+0100\n"
+"PO-Revision-Date: 2016-02-12 15:41+0100\n"
+"Language-Team: rs@techno-flex.de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: rs@techno-flex.de\n"
+"Language: de\n"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least a Draft Bid has been created"
+msgstr "Zumindest ein Anfrageentwurf wurde angelegt."
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least a PO has been confirmed"
+msgstr "Zumindest eine Bestellung wurde freigegeben"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least one of the Bids has been completed"
+msgstr "Zumindest eine Anfrage wurde abgeschlossen"
+
+#. module: purchase_request_to_requisition
+#: selection:purchase.request.line,requisition_state:0
+msgid "Bid Selection"
+msgstr "Anfrageauswahl"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "Bid Sent to Suppliers"
+msgstr "An Lieferanten gesendete Anfragen"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line,requisition_state:0
+msgid "Bid Status"
+msgstr "Anfragestatus"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "Bid completed"
+msgstr "Anfrage abgeschlossen"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line.make.purchase.requisition:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: purchase_request_to_requisition
+#: selection:purchase.request.line,requisition_state:0
+msgid "Cancelled"
+msgstr "Storniert"
+
+#. module: purchase_request_to_requisition
+#: help:product.template,purchase_request:0
+msgid ""
+"Check this box to generate purchase request instead of generating requests "
+"for quotation from procurement."
+msgstr ""
+"Diese Box anwählen, um Bestellanforderungen anstelle von Angebotsanfragen "
+"aus der Disposition zu erstellen."
+
+#. module: purchase_request_to_requisition
+#: selection:purchase.request.line,requisition_state:0
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+#. module: purchase_request_to_requisition
+#: model:ir.actions.act_window,name:purchase_request_to_requisition.action_purchase_request_line_make_purchase_requisition
+#: view:purchase.request.line.make.purchase.requisition:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Create Call for Bids"
+msgstr "Angebotsanfragen anlegen"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,create_uid:0
+#: field:purchase.request.line.make.purchase.requisition.item,create_uid:0
+msgid "Created by"
+msgstr "Angelegt durch"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,create_date:0
+#: field:purchase.request.line.make.purchase.requisition.item,create_date:0
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition.item,name:0
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line.make.purchase.requisition:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Details"
+msgstr "Details"
+
+#. module: purchase_request_to_requisition
+#: selection:purchase.request.line,requisition_state:0
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line.make.purchase.requisition:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Existing draft Call for Bid to update:"
+msgstr "Bestehende zu aktualisierende Angebotsaufforderung:"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,id:0
+#: field:purchase.request.line.make.purchase.requisition.item,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,item_ids:0
+msgid "Items"
+msgstr "Einträge"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,write_uid:0
+#: field:purchase.request.line.make.purchase.requisition.item,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition,write_date:0
+#: field:purchase.request.line.make.purchase.requisition.item,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: purchase_request_to_requisition
+#: field:procurement.order,request_id:0
+msgid "Latest Purchase Request"
+msgstr "Letzte Bestellanforderung"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "New Bid"
+msgstr "Neue Anfrage"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+#: selection:purchase.request.line,requisition_state:0
+msgid "No Bid"
+msgstr "Keine Anfrage"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "No Bid has been created"
+msgstr "Keine Anfrage erstellt"
+
+#. module: purchase_request_to_requisition
+#: selection:purchase.request.line,requisition_state:0
+msgid "PO Created"
+msgstr "Bestellung angelegt"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_procurement_order
+msgid "Procurement"
+msgstr "Beschaffung"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition.item,product_id:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_product_template
+msgid "Product Template"
+msgstr "Produktvorlage"
+
+#. module: purchase_request_to_requisition
+#: field:product.template,purchase_request:0
+msgid "Purchase Request"
+msgstr "Bestellanforderung"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line
+#: field:purchase.request.line.make.purchase.requisition.item,line_id:0
+msgid "Purchase Request Line"
+msgstr "Bestellanforderungsposition"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line_make_purchase_requisition
+msgid "Purchase Request Line Make Purchase Requisition"
+msgstr "Erstelle Bestellanforderung aus Bestellanfragepsoition"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line_make_purchase_requisition_item
+msgid "Purchase Request Line Make Purchase Requisition Item"
+msgstr "Erstelle Bestellanforderungseintrag aus Bestellanfragepsoition"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.requisition.line,purchase_request_lines:0
+msgid "Purchase Request Lines"
+msgstr "Bestellanforderungspositionen"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.requisition:purchase_request_to_requisition.view_purchase_requisition_form
+msgid "Purchase Request lines"
+msgstr "Bestellanforderungspositionen"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_requisition
+#: field:purchase.request.line.make.purchase.requisition,purchase_requisition_id:0
+msgid "Purchase Requisition"
+msgstr "Einkaufsanforderung"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_requisition_line
+msgid "Purchase Requisition Line"
+msgstr "Einkaufsanforderungsposition"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_form
+#: field:purchase.request.line,requisition_lines:0
+msgid "Purchase Requisition Lines"
+msgstr "Einkaufsanforderungspositionen"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition.item,product_qty:0
+msgid "Quantity to Bid"
+msgstr "Anfragemenge"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "Request"
+msgstr "Anforderung"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request:purchase_request_to_requisition.view_purchase_request_form
+msgid "Requisition Lines"
+msgstr "Anforderungspositionen"
+
+#. module: purchase_request_to_requisition
+#: view:purchase.request.line:purchase_request_to_requisition.purchase_request_line_search
+msgid "Requisition Status"
+msgstr "Anforderungsstatus"
+
+#. module: purchase_request_to_requisition
+#: view:product.template:purchase_request_to_requisition.product_template_form_view_inherit
+msgid "True"
+msgstr "Wahr"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition.item,product_uom_id:0
+msgid "UoM"
+msgstr "ME"
+
+#. module: purchase_request_to_requisition
+#: field:purchase.request.line.make.purchase.requisition.item,wiz_id:0
+msgid "Wizard"
+msgstr "Assistent"

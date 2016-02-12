@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_plan_analysis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-12 09:02+0100\n"
+"PO-Revision-Date: 2016-02-12 09:09+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,kpi_amount:0
+msgid "Amount"
+msgstr "Betrag"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,account_id:0
+msgid "Analytic Account"
+msgstr "Kostenstelle"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "April"
+msgstr "April"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "August"
+msgstr "August"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Cost - Actual"
+msgstr "Ist-Kosten"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Cost - Plan"
+msgstr "Plan-Kosten"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Cost - Variance"
+msgstr "Kostenabweichung"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+msgid "Creation Date"
+msgstr "Anlagedatum"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,day:0
+msgid "Day"
+msgstr "Tag"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "December"
+msgstr "Dezember"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "February"
+msgstr "Februar"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,complete_wbs_code:0
+msgid "Full WBS Code"
+msgstr "Vollständiger PSP-Schlüssel"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,complete_wbs_name:0
+msgid "Full WBS Name"
+msgstr "Vollständige PSP-Bezeichnung"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,general_account_id:0
+msgid "General Account"
+msgstr "Allgemeines Konto"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Gross Margin - Actual"
+msgstr "Brutto-Ist-Marge"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Gross Margin - Plan"
+msgstr "Brutto-Plan-Marge"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Gross Margin - Variance"
+msgstr "Brutto-Margenabweichung"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+msgid "Group By..."
+msgstr "Gruppiere..."
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "January"
+msgstr "Januar"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "July"
+msgstr "Juli"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "June"
+msgstr "Juni"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+msgid "KPI Type"
+msgstr "KPI-Art"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "March"
+msgstr "März"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "May"
+msgstr "Mai"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,month:0
+msgid "Month"
+msgstr "Monat"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "November"
+msgstr "November"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "October"
+msgstr "Oktober"
+
+#. module: analytic_plan_analysis
+#: model:ir.actions.act_window,name:analytic_plan_analysis.action_account_analytic_plan_actual_amounts
+#: model:ir.ui.menu,name:analytic_plan_analysis.menu_action_account_analytic_plan_actual_tree
+msgid "Plan vs. Actual"
+msgstr "Plan vs. Ist"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_graph
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+msgid "Plan vs. Actual analysis"
+msgstr "Plan vs. Ist-Rechnung"
+
+#. module: analytic_plan_analysis
+#: model:ir.model,name:analytic_plan_analysis.model_report_account_analytic_plan_actual
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_tree
+msgid "Plan vs. actual analysis"
+msgstr "Plan vs. Ist-Rechnung"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,version_id:0
+msgid "Planning Version"
+msgstr "Planungsversion"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,product_id:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+msgid "Product UoM"
+msgstr "Produkt-ME"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Revenue - Actual"
+msgstr "Ist-Umsatz"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Revenue - Plan"
+msgstr "Plan-Umsatz"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,kpi_type:0
+msgid "Revenue - Variance"
+msgstr "Umsatzabweichung"
+
+#. module: analytic_plan_analysis
+#: selection:report.account.analytic.plan.actual,month:0
+msgid "September"
+msgstr "September"
+
+#. module: analytic_plan_analysis
+#: model:ir.actions.act_window,help:analytic_plan_analysis.action_account_analytic_plan_actual_amounts
+msgid ""
+"This report allows you to compare plan vs. actuals. The chart is based on "
+"amounts"
+msgstr ""
+"Diese Auswertung ermöglicht Ihnen den Vergleich von Plan zu Ist. Die "
+"Tabelle basiert auf Beträgen"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,kpi_type:0
+msgid "Type"
+msgstr "Art"
+
+#. module: analytic_plan_analysis
+#: field:report.account.analytic.plan.actual,product_uom_id:0
+msgid "UoM"
+msgstr "ME"
+
+#. module: analytic_plan_analysis
+#: view:report.account.analytic.plan.actual:analytic_plan_analysis.view_account_analytic_plan_actual_search
+#: field:report.account.analytic.plan.actual,year:0
+msgid "Year"
+msgstr "Jahr"
