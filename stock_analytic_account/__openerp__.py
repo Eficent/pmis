@@ -1,24 +1,6 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    Copyright (C) 2014 Eficent (<http://www.eficent.com/>)
-#              Jordi Ballester Alomar <jordi.ballester@eficent.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-
+# © 2016 Eficent Business and IT Consulting Services S.L.
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Stock Analytic Account',
@@ -31,24 +13,24 @@
     'website': 'http://project.expert',
     'category': 'Project Management',
     'license': 'AGPL-3',
-    'depends': ['stock', 'analytic'],
+    'depends': ['stock', 'analytic', 'stock_analytic',
+                'product_available_hook',
+                'stock_get_inventory_lines_hook',
+                'stock_inventory_action_check_hook',
+                'stock_action_scrap_hook',
+                'stock_change_product_qty_hook',
+                'stock_analytic_reserve',
+                'sale_stock'],
     'data': [
              'view/stock_view.xml',
              'view/stock_picking_view.xml',
              'view/analytic_account_view.xml',
+             'view/stock_warehouse_view.xml',
              # 'report/report_stock_analytic_account_view.xml',
              # 'report/report_stock_move_view.xml',
              'wizard/stock_change_product_qty_view.xml',
-             'wizard/stock_fill_inventory_view.xml',
     ],
-    'test': [
-        'test/stock_users.yml',
-        'demo/stock_demo.yml',
-        'test/opening_stock.yml',
-        'test/shipment.yml',
-        'test/stock_report.yml',
-        'test/setlast_tracking.yml',
-    ],
+
     'installable': True,
     'active': False,
     'certificate': '',

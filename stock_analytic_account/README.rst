@@ -14,7 +14,7 @@ Features of this module:
   project manager
 * Makes it possible to search picking lists by analytic account or its
   project manager
-* Adds button in the Project Form and an Action from Project's 'More'
+* Adds button in the Analytic Account Form and an Action from its 'More'
   menu to list the Procurement Orders associated to the selected project.
 
 Installation

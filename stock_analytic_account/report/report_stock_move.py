@@ -20,11 +20,12 @@
 ##############################################################################
 
 from openerp import tools
-from openerp.osv import fields, orm
+from openerp.osv import fields, osv
 
 
-class report_stock_move(orm.Model):
-    _inherit = "report.stock.move"
+class report_stock_move(osv.Model):
+    _name = "report.stock.move"
+    _auto = False
     _columns = {
         'analytic_account_id': fields.many2one('account.analytic.account',
                                                'Analytic Account',
@@ -54,13 +55,13 @@ class report_stock_move(orm.Model):
                 sm.location_dest_id as location_dest_id,
                 sum(sm.product_qty) as product_qty,
                 sum(
-                    (CASE WHEN sp.type in ('out') THEN
+                    (CASE WHEN spt.code in ('outgoing') THEN
                              (sm.product_qty * pu.factor / pu2.factor)
                           ELSE 0.0
                     END)
                 ) as product_qty_out,
                 sum(
-                    (CASE WHEN sp.type in ('in') THEN
+                    (CASE WHEN spt.code in ('incoming') THEN
                              (sm.product_qty * pu.factor / pu2.factor)
                           ELSE 0.0
                     END)
@@ -70,21 +71,20 @@ class report_stock_move(orm.Model):
                 sm.state as state,
                 sm.product_uom as product_uom,
                 pt.categ_id as categ_id ,
-                coalesce(sp.type, 'other') as type,
-                sp.stock_journal_id AS stock_journal,
+                coalesce(spt.code, 'other') as type,
                 sum(
-                    (CASE WHEN sp.type in ('in') THEN
+                    (CASE WHEN spt.code in ('incoming') THEN
                         (
                             sm.product_qty * pu.factor / pu2.factor
-                        ) * pt.standard_price
+                        ) * pt.list_price
                     ELSE 0.0
                     END
                     )
                     -
-                    (CASE WHEN sp.type in ('out') THEN
+                    (CASE WHEN spt.code in ('outgoing') THEN
                         (
                             sm.product_qty * pu.factor / pu2.factor
-                        ) * pt.standard_price
+                        ) * pt.list_price
                     ELSE 0.0
                     END)
                 ) as value,
@@ -93,24 +93,27 @@ class report_stock_move(orm.Model):
             FROM
                 stock_move sm
                 LEFT JOIN stock_picking sp ON (sm.picking_id=sp.id)
+                LEFT JOIN stock_picking_type spt ON (sm.picking_type_id=spt.id)
                 LEFT JOIN product_product pp ON (sm.product_id=pp.id)
                 LEFT JOIN product_uom pu ON (sm.product_uom=pu.id)
                   LEFT JOIN product_uom pu2 ON (sm.product_uom=pu2.id)
                 LEFT JOIN product_template pt ON (pp.product_tmpl_id=pt.id)
             GROUP BY
-                coalesce(sp.type, 'other'), date_trunc('day', sm.date),
+                coalesce(spt.code, 'other'), date_trunc('day', sm.date),
                 sm.partner_id,
                 sm.state, sm.product_uom, sm.date_expected,
-                sm.product_id, pt.standard_price, sm.picking_id,
+                sm.product_id, pt.list_price, sm.picking_id,
                 sm.company_id, sm.location_id, sm.location_dest_id,
-                pu.factor, pt.categ_id, sp.stock_journal_id,
+                pu.factor, pt.categ_id,
                 year, month, day, analytic_account_id, analytic_reserved
        )
         """)
 
 
-class report_stock_inventory(orm.Model):
-    _inherit = "report.stock.inventory"
+class report_stock_inventory(osv.Model):
+    _name = "report.stock.inventory"
+    _auto = False
+
     _columns = {
         'analytic_account_id': fields.many2one('account.analytic.account',
                                                'Analytic Account',
@@ -136,7 +139,7 @@ CREATE OR REPLACE view report_stock_inventory AS (
         m.prodlot_id as prodlot_id,
         coalesce(
             sum(
-                -pt.standard_price * m.product_qty * pu.factor / pu2.factor
+                -pt.list_price * m.product_qty * pu.factor / pu2.factor
             )::decimal, 0.0) as value,
         coalesce(
             sum(
@@ -172,7 +175,7 @@ CREATE OR REPLACE view report_stock_inventory AS (
         m.state as state, m.prodlot_id as prodlot_id,
         coalesce(
             sum(
-                pt.standard_price * m.product_qty * pu.factor / pu2.factor
+                pt.list_price * m.product_qty * pu.factor / pu2.factor
             )::decimal, 0.0) as value,
         coalesce(
             sum(
