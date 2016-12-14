@@ -40,7 +40,6 @@ class StockInventory(models.Model):
         # location, never recursively, so we use a special context
         self = self.with_context(dict(self.env.context, compute_child=False))
 
-        product_obj = self.env['product.product']
         for inv in self:
             move_ids = []
             moves = []
@@ -56,9 +55,10 @@ class StockInventory(models.Model):
                     uom=line.product_uom_id.id, to_date=inv.date, date=inv.date,
                     prodlot_id=line.prod_lot_id.id,
                     analytic_account_id=line.analytic_account_id.id,
+                    location=line.location_id.id
                 )
                 # ENF OF stock_analytic_account
-                res = product_obj._product_available(
+                res = self.env['product.product']._product_available(
                     [pid], None, False)[pid]
                 change = line.product_qty - res['qty_available']
                 lot_id = line.prod_lot_id.id

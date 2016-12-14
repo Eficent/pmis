@@ -12,12 +12,14 @@ class ProductProduct(models.Model):
     @api.model
     def _get_quant_domain(self):
         domain = super(ProductProduct, self)._get_quant_domain()
-        context = self.env.context or {}
         analytic_account_id = self.env.context.get('analytic_account_id', False)
         if domain and analytic_account_id:
             return [('analytic_account_id', '=', analytic_account_id)]
+        elif analytic_account_id:
+            domain = [('analytic_account_id', '=', analytic_account_id)]
         else:
-            return []
+            domain = [('analytic_account_id', '=', False)]
+        return domain
 
     @api.multi
     def _get_move_in_domain(self):
