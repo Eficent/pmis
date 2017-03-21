@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
 #---------------------------------------------------------------------------------------------------------
@@ -10,19 +10,17 @@
             <field name="model">account.analytic.account</field>
             <field name="type">tree</field>
             <field eval="8" name="priority"/>
-            <field name="inherit_id" ref="account.view_account_analytic_account_list"/>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_list"/>
             <field name="arch" type="xml">
-				<xpath expr="//tree" position="attributes">
+                <!-- <xpath expr="//tree" position="attributes">
                     <attribute name="colors">grey:state in
                         ('cancelled','close');blue:account_class ==
                         'work_package'</attribute>
-                </xpath>
-                <field name="complete_name" position="before">
-                    <field name="complete_wbs_code" string="WBS code"/>
-                </field>
+                </xpath> -->
                 <field name="code" position="replace"/>
                 <field name="partner_id" position="after">
-            		<field name="account_class" string="Class" attrs="{'invisible':[('type','not in',['contract','template'])]}"/>
+                    <field name="complete_wbs_code" string="WBS code"/>
+                    <!-- <field name="account_class" string="Class" attrs="{'invisible':[('type','not in',['contract','template'])]}"/> -->
                     <field name="portfolio_analytic_account_id"
                            attrs="{'invisible':[('type','not in',['contract','template'])]}"
                            domain="[('account_class', '=', 'portfolio')]"/>
@@ -30,10 +28,9 @@
                            attrs="{'invisible':[('type','not in',['contract','template'])]}"
                            domain="[('account_class', '=', 'program')]"/>
                     <field name="project_analytic_account_id"
-                           attrs="{'invisible':[('type','not in',['contract','template'])]}"
                            domain="[('account_class', '=', 'project')]"/>
                     <!--<field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
-            	</field>
+                </field>
             </field>
         </record>
 
@@ -41,42 +38,42 @@
             <field name="name">account.analytic.account.search</field>
             <field name="model">account.analytic.account</field>
             <field name="type">search</field>
-            <field name="inherit_id" ref="account.view_account_analytic_account_search"/>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_search"/>
             <field name="arch" type="xml">
-            	<field name="name" position="after">
-            		<field name="complete_wbs_name" string="WBS name"/>
-            		<field name="complete_wbs_code" string="WBS code"/>
-					<field name="account_class" string="Class"/>
+                <field name="name" position="after">
+                    <field name="complete_wbs_name" string="WBS name"/>
+                    <field name="complete_wbs_code" string="WBS code"/>
+                    <field name="account_class" string="Class"/>
+                    <field name="project_analytic_account_id"
+                           domain="[('account_class', '=', 'project')]"/>
                     <field name="portfolio_analytic_account_id"
                            domain="[('account_class', '=', 'portfolio')]"/>
                     <field name="program_analytic_account_id"
                            domain="[('account_class', '=', 'program')]"/>
-                    <field name="project_analytic_account_id"
-                           domain="[('account_class', '=', 'project')]"/>
                     <!--<field name="stage_id" domain="[]" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
-            	</field>
+                </field>
             </field>
         </record>
 
-		<record id="view_account_analytic_account_tree" model="ir.ui.view">
+        <!-- <record id="view_account_analytic_account_tree" model="ir.ui.view">
             <field name="name">account.analytic.account.tree</field>
             <field name="model">account.analytic.account</field>
             <field name="type">tree</field>
             <field name="field_parent">child_complete_ids</field>
             <field name="inherit_id" ref="account.view_account_analytic_account_tree"/>
             <field name="arch" type="xml">
-				<xpath expr="//tree" position="attributes">
+                <xpath expr="//tree" position="attributes">
                     <attribute name="colors">grey:state in
                         ('cancelled','close');blue:account_class ==
                         'work_package'</attribute>
                 </xpath>
-            	<field name="code" position="after">
-            		<field name="complete_wbs_code" string="WBS code"/>
-					<field name="account_class" string="Class"/>
-                    <!--<field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
-            	</field>
+                <field name="code" position="after">
+                    <field name="complete_wbs_code" string="WBS code"/>
+                    <field name="account_class" string="Class"/>
+                    <field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>
+                </field>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_account_analytic_account_form" model="ir.ui.view">
             <field name="name">account.analytic.account.form</field>
@@ -84,18 +81,19 @@
             <field name="type">form</field>
             <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
             <field name="arch" type="xml">
-            	<field name="code" position="after">
-            		<field name="account_class" string="Class"/>
+                <field name="tag_ids" position="after">
+                    <field name="account_class" string="Class"/>
                     <field name="portfolio_analytic_account_id"
                            domain="[('account_class', '=', 'portfolio')]"/>
                     <field name="program_analytic_account_id"
                            domain="[('account_class', '=', 'program')]"/>
                     <field name="project_analytic_account_id"
                            domain="[('account_class', '=', 'project')]"/>
-                    <field name="state" invisible="True"/>
+                    <!-- <field name="state" invisible="True"/> -->
                     <!--<field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
-            		<field name="complete_wbs_code" string="WBS code" readonly="1"/>
-            	</field>
+                    <field name="complete_wbs_code" string="WBS code" readonly="1"/>
+                    <field name="parent_id" string="Parent Analytic Account"/>
+                </field>
                 <!--<notebook position="inside">-->
                     <!--<page string="Child Stages" name="child_stages">-->
                         <!--<field name="child_stage_ids"/>-->
@@ -107,15 +105,15 @@
         <record id="view_account_analytic_account_search" model="ir.ui.view">
             <field name="name">account.analytic.account.search</field>
             <field name="model">account.analytic.account</field>
-            <field name="inherit_id" ref="account.view_account_analytic_account_search"/>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_search"/>
             <field name="arch" type="xml">
-                <group string="Group By" position="inside">
+                <xpath expr="//group" position="inside">
                     <filter string="Master Project" name="Master Project" context="{'group_by':'project_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
                     <filter string="Master Program" name="Master Program" context="{'group_by':'program_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
                     <filter string="Master Portfolio" name="Master Portfolio" context="{'group_by':'portfolio_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
-                </group>
+                </xpath>
             </field>
         </record>
 
     </data>
-</openerp>
+</odoo>
