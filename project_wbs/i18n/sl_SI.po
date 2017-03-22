@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-22 10:36+0000\n"
-"PO-Revision-Date: 2017-03-22 10:36+0000\n"
+"POT-Creation-Date: 2017-03-22 10:37+0000\n"
+"PO-Revision-Date: 2017-03-22 10:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,17 +18,17 @@ msgstr ""
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Administration"
-msgstr "Amministrazione"
+msgstr "Administracija"
 
 #. module: project_wbs
 #: model:ir.model,name:project_wbs.model_account_analytic_account
 msgid "Analytic Account"
-msgstr "Conto Analitico"
+msgstr "Analitični konto"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Append this project to another one using analytic accounts hierarchy"
-msgstr "Sottometti questo progetto ad un altro usando la gerarchia dei conti analitici"
+msgstr "Podredi ta projekt drugemu preko hierarhije analitičnih kontov"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_child_ids
@@ -39,7 +39,7 @@ msgstr "Child Accounts"
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Child WBS elements"
-msgstr "Elementi WBS subordinati"
+msgstr "Podrejeni elementi členitve"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_account_class
@@ -49,7 +49,7 @@ msgstr "Elementi WBS subordinati"
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 #: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
 msgid "Class"
-msgstr "Classe"
+msgstr "Razred"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
@@ -59,45 +59,45 @@ msgstr "Click to start a new project."
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Code"
-msgstr "Codice"
+msgstr "Oznaka"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_code_calc
 #: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_code_calc
 msgid "Computed WBS code"
-msgstr "Codice WBS calcolato"
+msgstr "Izračunana koda členitve"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Create child WBS element"
-msgstr "Crea elemento WBS subordinato"
+msgstr "Podrejeni elementi členitve"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 msgid "Deliverable"
-msgstr "Consegnabile"
+msgstr "Dobava"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.act_project_project_2_deliverable_all
 msgid "Deliverables"
-msgstr "Consegnabili"
+msgstr "Dobave"
 
 #. module: project_wbs
 #: code:addons/project_wbs/models/form_button.py:20
 #, python-format
 msgid "Details"
-msgstr "Dettagli"
+msgstr "Podrobnosti"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.open_view_project_form
 msgid "Edit project"
-msgstr "Edita progetto"
+msgstr "Urejanje projekta"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "End Date"
-msgstr "Data finale"
+msgstr "Datum zaključka"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_complete_wbs_code
@@ -105,59 +105,59 @@ msgstr "Data finale"
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_code
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_code_calc
 msgid "Full WBS Code"
-msgstr "Codice WBS completo"
+msgstr "Polna WBS koda"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_complete_wbs_name
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_name
 msgid "Full WBS path"
-msgstr "Via WBS completa"
+msgstr "Polna WBS pot"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_name
 #: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_name
 msgid "Full path in the WBS hierarchy"
-msgstr "Via completa nella gerarchia WBS"
+msgstr "Polna pot v WBS hierarhiji"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_wbs_indent
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_wbs_indent
 msgid "Level"
-msgstr "Livello"
+msgstr "Nivo"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
 #: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
 msgid "Master Portfolio"
-msgstr "Portfolio principale"
+msgstr "Nosilni portfelj"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
 #: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
 msgid "Master Program"
-msgstr "Programma principale"
+msgstr "Nosilni program"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
 #: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
 msgid "Master Project"
-msgstr "Progetto principale"
+msgstr "Nosilni projekt"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Miscellaneous"
-msgstr "Varie"
+msgstr "Razno"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Other Info"
-msgstr "Altre informazioni"
+msgstr "Ostale informacije"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Parent"
-msgstr "Genitore"
+msgstr "Nadrejeni"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_parent_id
@@ -169,75 +169,75 @@ msgstr "Parent Analytic Account"
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Parent WBS element"
-msgstr "Elemento WBS genitore"
+msgstr "Nadrejeni člen"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 msgid "Phase"
-msgstr "Fase"
+msgstr "Faza"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_portfolio_analytic_account_id
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_portfolio_analytic_account_id
 msgid "Portfolio"
-msgstr "Portafoglio"
+msgstr "Portfelj"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.group_portfolio
 #: model:ir.actions.act_window,name:project_wbs.group_program
 #: model:ir.ui.menu,name:project_wbs.menu_project_wbs_portfolio
 msgid "Portfolios"
-msgstr "Portafoglit"
+msgstr "Portfelji"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_program_analytic_account_id
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_program_analytic_account_id
 msgid "Program"
-msgstr "Programma"
+msgstr "Program"
 
 #. module: project_wbs
 #: model:ir.ui.menu,name:project_wbs.menu_project_wbs_program
 msgid "Programs"
-msgstr "Programmi"
+msgstr "Programi"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 msgid "Project"
-msgstr "Progetto"
+msgstr "Projekt"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Project Form View"
-msgstr "Formulario progetto"
+msgstr "Obrazec projekta"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_project_child_complete_ids
 msgid "Project Hierarchy"
-msgstr "Gerarchia progettuale"
+msgstr "Projektna hierarhija"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Project Stages"
-msgstr "Stadi progetto"
+msgstr "Stopnje projekta"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Project Task Stages"
-msgstr "Stadi attività progettuali"
+msgstr "Stopnje projektnih opravil"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Project configuration"
-msgstr "Configurazione progetto"
+msgstr "Konfiguracija projekta"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.group_project
 #: model:ir.actions.act_window,name:project_wbs.group_subproject
 #: model:ir.ui.menu,name:project_wbs.menu_project_wbs_project
 msgid "Projects"
-msgstr "Progetti"
+msgstr "Projekti"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
@@ -253,54 +253,54 @@ msgstr "Projects are used to organize your activities; plan\n"
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Root Analytic Accounts"
-msgstr "Radici analitiche"
+msgstr "Temeljni analitični konti"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_portfolio_analytic_account_id
 #: model:ir.model.fields,help:project_wbs.field_project_project_portfolio_analytic_account_id
 msgid "Root Portfolio in the WBS hierarchy"
-msgstr "Progetto radice nella gerarchia WBS"
+msgstr "Korenski projekt v razčlenitveni hierarhiji"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_program_analytic_account_id
 #: model:ir.model.fields,help:project_wbs.field_project_project_program_analytic_account_id
 msgid "Root Program in the WBS hierarchy"
-msgstr "Progetto radice nella gerarchia WBS"
+msgstr "Korenski projekt v razčlenitveni hierarhiji"
 
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_project_analytic_account_id
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_project_analytic_account_id
 msgid "Root Project"
-msgstr "Progetto radice"
+msgstr "Korenski projekt"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_project_analytic_account_id
 #: model:ir.model.fields,help:project_wbs.field_project_project_project_analytic_account_id
 msgid "Root Project in the WBS hierarchy"
-msgstr "Progetto radice nella gerarchia WBS"
+msgstr "Korenski projekt v razčlenitveni hierarhiji"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 #: model:ir.ui.view,arch_db:project_wbs.view_project
 msgid "Start Date"
-msgstr "Data d'inizio"
+msgstr "Začetni datum"
 
 #. module: project_wbs
 #: model:ir.ui.menu,name:project_wbs.menu_project_wbs_subproject
 msgid "Sub-projects"
-msgstr "Sotto-progettot"
+msgstr "Pod-projektit"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_account_class
 #: model:ir.model.fields,help:project_wbs.field_project_project_account_class
 msgid "The classification allows you to create a proper project Work Breakdown Structure"
-msgstr "La classificazione permette di creare una struttura di progetto articolata - Work Breakdown Structure"
+msgstr "Klasifikacija omogoča ustvarjanje primerne WBS (WBS - Work Breakdown Structure)"
 
 #. module: project_wbs
 #: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_code
 #: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_code
 msgid "The full WBS code describes the full path of this component within the project WBS hierarchy"
-msgstr "Il codice WBS descrive la via completa di questa componente nell'arco della gerarchia progettuale articolata"
+msgstr "Polna WBS koda opisuje polno pot te komponente v sklopu WBS hierarhije projekta"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
@@ -310,14 +310,14 @@ msgstr "To invoice or setup invoicing and renewal options, go to the related con
 #. module: project_wbs
 #: model:ir.model.fields,field_description:project_wbs.field_project_project_c_wbs_code
 msgid "WBS Code"
-msgstr "Codice WBS"
+msgstr "Koda členitve"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 #: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_form
 #: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_list
 msgid "WBS code"
-msgstr "Codice WBS"
+msgstr "Koda členitve"
 
 #. module: project_wbs
 #: model:ir.model,name:project_wbs.model_project_project
@@ -327,34 +327,34 @@ msgstr "WBS element"
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "WBS element name"
-msgstr "Nome elemento WBS"
+msgstr "Naziv elementa členitve"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.create_wbs_element
 #: model:ir.actions.act_window,name:project_wbs.open_view_project_wbs
 msgid "WBS elements"
-msgstr "Elementi WBS"
+msgstr "Elementi členitve"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.open_view_wbs_kanban
 msgid "WBS kanban"
-msgstr "WBS kanban"
+msgstr "Kanban členitev"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,name:project_wbs.open_view_wbs_tree
 #: model:ir.ui.menu,name:project_wbs.menu_fullwbs
 msgid "WBS overview"
-msgstr "Struttura progetti"
+msgstr "Pregled členitve"
 
 #. module: project_wbs
 #: model:ir.ui.view,arch_db:project_wbs.edit_project
 msgid "Work Breakdown Structure"
-msgstr "Articolazione progetti (WBS)"
+msgstr "Členjenje projekta"
 
 #. module: project_wbs
 #: selection:account.analytic.account,account_class:0
 msgid "Work Package"
-msgstr "Pacco lavori"
+msgstr "Delovni seznam"
 
 #. module: project_wbs
 #: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
