@@ -1,0 +1,635 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_plan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 11:35+0100\n"
+"PO-Revision-Date: 2016-02-10 13:02+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: analytic_plan
+#: help:account.analytic.line.plan,amount:0
+msgid ""
+"\n"
+"            Calculated by multiplying the quantity\n"
+"            and the price given in the Product's\n"
+"            cost price. Always expressed in the\n"
+"            company main currency.\n"
+"            "
+msgstr ""
+"\n"
+"            Durch Multiplikation von Menge und\n"
+"            Produkt-Einstandspreis brechnet. Immer\n"
+"            in der Hauswährung angegeben.\n"
+"            "
+
+#. module: analytic_plan
+#: help:account.analytic.plan.journal,type:0
+msgid ""
+"\n"
+"            Gives the type of the analytic\n"
+"            journal. When it needs for a document\n"
+"            (eg: an invoice) to create analytic\n"
+"            entries, OpenERP will look  for a\n"
+"            matching journal of the same type.\n"
+"            "
+msgstr ""
+"\n"
+"            Gibt die Art des Kostenstellen-Journals\n"
+"            an. Wenn in einem Dokument (z. B.\n"
+"            einer Rechnung) eine Kostenstelle\n"
+"            angegeben werden muss, sucht ODOO\n"
+"            nach einem von der Art her passenden\n"
+"            Journal.\n"
+"            "
+
+#. module: analytic_plan
+#: help:account.analytic.plan.version,active:0
+msgid ""
+"\n"
+"            If the active\n"
+"            field is set to False,\n"
+"            it will allow you to hide\n"
+"            the analytic planning version\n"
+"            without removing it.\n"
+"            "
+msgstr ""
+"\n"
+"            Wenn das Aktiv-Feld \n"
+"            nicht gesetzt ist, erlaubt\n"
+"            dies die Version der Kostenplanung\n"
+"            zu verbergen, ohne diese zu \n"
+"            entfernen.\n"
+"            "
+
+#. module: analytic_plan
+#: help:account.analytic.plan.journal,active:0
+msgid ""
+"\n"
+"            If the active field is set to False,\n"
+"            it will allow you to hide the analytic\n"
+"            journal without removing it.\n"
+"            "
+msgstr ""
+"\n"
+"            Wenn das Aktiv-Feld \n"
+"            nicht gesetzt ist, erlaubt\n"
+"            dies die Version das Kostenstellen-\n"
+"            Journal zu verbergen, ohne dieses zu\n"
+"            entfernen.\n"
+"            "
+
+#. module: analytic_plan
+#: help:account.analytic.line.plan,unit_amount:0
+msgid ""
+"\n"
+"            Specifies the amount of\n"
+"            quantity to count.\n"
+"            "
+msgstr ""
+"\n"
+"            Gibt die zu zählende\n"
+"            Betragsmenge an.\n"
+"            "
+
+#. module: analytic_plan
+#: help:account.analytic.line.plan,amount_currency:0
+msgid ""
+"\n"
+"            The amount expressed in an\n"
+"            optional other currency.\n"
+"            "
+msgstr ""
+"\n"
+"            Der Betrag angegeben in\n"
+"            optionaler, anderer Währung.\n"
+"            "
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,help:analytic_plan.act_analytic_plan_cost_revenue
+msgid ""
+"<p>\n"
+"                No activity yet on this contract.\n"
+"              </p><p>\n"
+"                In OpenERP, contracts and projects are implemented using\n"
+"                analytic account. So, you can track costs and revenues to "
+"analyse\n"
+"                your margins easily.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p>\n"
+"                Noch keine Aktivität zu diesem Vertrag.\n"
+"              </p><p>\n"
+"                In OODOO sind Verträge und Projekte durch Kostenstellen\n"
+"                umgesetzt. So können Sie Kosten und Umsätze sowie\n"
+"                Ihre Margen leicht beobachten.\n"
+"              </p>\n"
+"            "
+
+#. module: analytic_plan
+#: field:account.analytic.plan.journal,active:0
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_search
+#: field:account.analytic.plan.version,active:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: analytic_plan
+#: view:account.analytic.account:analytic_plan.view_account_analytic_account_form_inh
+#: view:account.analytic.account:analytic_plan.view_account_analytic_account_tree_inh
+#: view:project.project:analytic_plan.edit_project_inh
+msgid "Active Plan Version"
+msgstr "Aktive Planversion"
+
+#. module: analytic_plan
+#: field:account.analytic.account,active_analytic_planning_version:0
+msgid "Active plan version"
+msgstr "Aktive Planversion"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,name:0
+msgid "Activity description"
+msgstr "Aktivitätsbeschreibung"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.journal,analytic_journal:0
+msgid "Actual Analytic journal"
+msgstr "Kostenstellenjournal"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_form
+#: field:account.analytic.line.plan,amount:0
+msgid "Amount"
+msgstr "Betrag"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+#: field:account.analytic.line.plan,account_id:0
+#: model:ir.model,name:analytic_plan.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Kostenstelle"
+
+#. module: analytic_plan
+#: model:ir.ui.menu,name:analytic_plan.analytic_plan_analytic_account_menu
+msgid "Analytic Accounting"
+msgstr "Kostenrechnung"
+
+#. module: analytic_plan
+#: model:ir.ui.menu,name:analytic_plan.account_analytic_def_account
+msgid "Analytic Accounts"
+msgstr "Kostenstellen"
+
+#. module: analytic_plan
+#: field:account.analytic.account,plan_line_ids:0
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_tree
+msgid "Analytic Entries"
+msgstr "Kostenbuchungen"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_form
+msgid "Analytic Entry"
+msgstr "Kostenbuchung"
+
+#. module: analytic_plan
+#: view:account.analytic.plan.journal:analytic_plan.view_account_analytic_plan_journal_form
+#: view:account.analytic.plan.journal:analytic_plan.view_account_analytic_plan_journal_tree
+msgid "Analytic Journal"
+msgstr "Kostenrechnungsjournal"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Analytic Journal Items related to a purchase journal."
+msgstr "Kostenjournal-Posten mit Bezug zu einem Einkaufsjournal."
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Analytic Journal Items related to a sale journal."
+msgstr "Kostenjournal-Posten mit Bezug zu einem Verkaufsjournal."
+
+#. module: analytic_plan
+#: model:ir.model,name:analytic_plan.model_account_analytic_plan_journal
+msgid "Analytic Journal Plan"
+msgstr "Kostenjournal-Planung"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_account_analytic_plan_journal_open_form
+#: model:ir.ui.menu,name:analytic_plan.account_analytic_plan_journal_entries
+#: model:ir.ui.menu,name:analytic_plan.account_analytic_plan_journal_entries_2
+msgid "Analytic Journal Plan Items"
+msgstr "Kostenjournal-Planposten"
+
+#. module: analytic_plan
+#: view:account.analytic.plan.journal:analytic_plan.view_account_analytic_plan_journal_search
+msgid "Analytic Journals"
+msgstr "Kostenjournale"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Analytic Line"
+msgstr "Kostenposition"
+
+#. module: analytic_plan
+#: model:ir.model,name:analytic_plan.model_analytic_plan_copy_version
+msgid "Analytic Plan copy versions"
+msgstr "Kostenplanung Version kopieren"
+
+#. module: analytic_plan
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_form
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_search
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_tree
+msgid "Analytic Planning Version"
+msgstr "Kostenplanungsversion"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_account_analytic_plan_version_form
+#: model:ir.ui.menu,name:analytic_plan.account_analytic_plan_version
+msgid "Analytic Planning Versions"
+msgstr "Kostenplanungsversionen"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_graph
+msgid "Analytic line planning"
+msgstr "Kostenpositions-Planung"
+
+#. module: analytic_plan
+#: model:ir.model,name:analytic_plan.model_account_analytic_line_plan
+msgid "Analytic planning line"
+msgstr "Kostenplanungsposition"
+
+#. module: analytic_plan
+#: view:analytic.plan.copy.version:analytic_plan.analytic_plan_copy_version_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: analytic_plan
+#: selection:account.analytic.plan.journal,type:0
+msgid "Cash"
+msgstr "Bar"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,code:0
+msgid "Code"
+msgstr "Schlüssel"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,company_id:0
+#: field:account.analytic.plan.journal,company_id:0
+#: field:account.analytic.plan.version,company_id:0
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_analytic_plan_copy_version_form
+msgid "Copy Analytic Plan Lines"
+msgstr "Kopiere Kostenplanpositionen"
+
+#. module: analytic_plan
+#: view:analytic.plan.copy.version:analytic_plan.analytic_plan_copy_version_form
+msgid "Copy analytic plan lines to a different version"
+msgstr "Kopiere Kostenplanpositionen in andere Version"
+
+#. module: analytic_plan
+#: view:analytic.plan.copy.version:analytic_plan.analytic_plan_copy_version_form
+msgid "Create"
+msgstr "Anlegen"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,create_uid:0
+#: field:account.analytic.plan.journal,create_uid:0
+#: field:account.analytic.plan.version,create_uid:0
+#: field:analytic.plan.copy.version,create_uid:0
+msgid "Created by"
+msgstr "Angelegt durch"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,create_date:0
+#: field:account.analytic.plan.journal,create_date:0
+#: field:account.analytic.plan.version,create_date:0
+#: field:analytic.plan.copy.version,create_date:0
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,currency_id:0
+msgid "Currency"
+msgstr "Währung"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+#: field:account.analytic.line.plan,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.version,default_plan:0
+msgid "Default plan version"
+msgstr "Vorgabe Planversion"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.version,default_committed:0
+msgid ""
+"Default version\n"
+"            for committed costs"
+msgstr ""
+"Vorgabeversion\n"
+"             für entstandene Kosten"
+
+#. module: analytic_plan
+#: field:analytic.plan.copy.version,dest_version_id:0
+msgid "Destination Planning Version"
+msgstr "Ziel Planversion"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Fin. Account"
+msgstr "Buchh.-konto"
+
+#. module: analytic_plan
+#: selection:account.analytic.plan.journal,type:0
+msgid "General"
+msgstr "Allgemein"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,general_account_id:0
+msgid "General Account"
+msgstr "Hauptkonto"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_form
+msgid "General Accounting"
+msgstr "Hauptbuchhaltung"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+#: view:account.analytic.plan.journal:analytic_plan.view_account_analytic_plan_journal_search
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_search
+msgid "Group By..."
+msgstr "Gruppiere..."
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,id:0
+#: field:account.analytic.plan.journal,id:0
+#: field:account.analytic.plan.version,id:0
+#: field:analytic.plan.copy.version,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: analytic_plan
+#: field:analytic.plan.copy.version,include_child:0
+msgid "Include child accounts"
+msgstr "Unterkonten einschließen"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Journal"
+msgstr "Journal"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,write_uid:0
+#: field:account.analytic.plan.journal,write_uid:0
+#: field:account.analytic.plan.version,write_uid:0
+#: field:analytic.plan.copy.version,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,write_date:0
+#: field:account.analytic.plan.journal,write_date:0
+#: field:account.analytic.plan.version,write_date:0
+#: field:analytic.plan.copy.version,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,amount_currency:0
+msgid "Line Total"
+msgstr "Positionssumme"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.journal,line_ids:0
+msgid "Lines"
+msgstr "Positionen"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "My Entries"
+msgstr "Meine Posten"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_form
+#: field:account.analytic.line.plan,notes:0
+#: view:account.analytic.plan.version:analytic_plan.view_account_analytic_plan_version_form
+#: field:account.analytic.plan.version,notes:0
+msgid "Notes"
+msgstr "Hinweise"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Others"
+msgstr "Andere"
+
+#. module: analytic_plan
+#: model:ir.ui.menu,name:analytic_plan.project_plan
+msgid "Plan"
+msgstr "Plan"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.journal,code:0
+msgid "Plan Journal Code"
+msgstr "Plan-Journalkennung"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.journal,name:0
+msgid "Plan Journal Name"
+msgstr "Plan-Journalbezeichnung"
+
+#. module: analytic_plan
+#: model:ir.model,name:analytic_plan.model_account_analytic_plan_version
+msgid "Plan Version"
+msgstr "Planversion"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.version,code:0
+msgid "Plan Version Code"
+msgstr "Planversionskennung"
+
+#. module: analytic_plan
+#: field:account.analytic.plan.version,name:0
+msgid "Plan Version Name"
+msgstr "Planversionsbezeichnung"
+
+#. module: analytic_plan
+#: field:account.analytic.account,balance_plan:0
+msgid "Planned Balance"
+msgstr "Plansaldo"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.act_analytic_plan_cost_revenue
+msgid "Planned Costs & Revenues"
+msgstr "Geplante Kosten & Umsätze"
+
+#. module: analytic_plan
+#: field:account.analytic.account,credit_plan:0
+msgid "Planned Credit"
+msgstr "Geplantes Soll"
+
+#. module: analytic_plan
+#: field:account.analytic.account,debit_plan:0
+msgid "Planned Debit"
+msgstr "Geplantes Haben"
+
+#. module: analytic_plan
+#: view:account.analytic.account:analytic_plan.view_account_analytic_account_form_analytic_plan
+msgid "Planned costs"
+msgstr "Geplante Kosten"
+
+#. module: analytic_plan
+#: view:account.analytic.account:analytic_plan.view_account_analytic_account_form_analytic_plan
+msgid "Planned costs and revenues"
+msgstr "Geplante Kosten und Umsätze"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_account_analytic_line_plan_form
+msgid "Planning Analytic Entries"
+msgstr "Planung von Kostenbuchungen"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,journal_id:0
+msgid "Planning Analytic Journal"
+msgstr "Kostenjournal der Planung"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_account_analytic_plan_journal_form
+#: model:ir.ui.menu,name:analytic_plan.account_def_analytic_plan_journal
+msgid "Planning Analytic Journals"
+msgstr "Kostenjournale der Planung"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,version_id:0
+msgid "Planning Version"
+msgstr "Planungsversion"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,name:analytic_plan.action_account_analytic_plan_journal_tree
+#: model:ir.ui.menu,name:analytic_plan.account_analytic_plan_journal_print
+msgid "Print Planning Analytic Journals"
+msgstr "Drucke Kostenjournale der Planung"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+#: field:account.analytic.line.plan,product_id:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_form
+msgid "Product Information"
+msgstr "Produktinformation"
+
+#. module: analytic_plan
+#: selection:account.analytic.plan.journal,type:0
+msgid "Purchase"
+msgstr "Einkauf"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Purchases"
+msgstr "Einkäufe"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,unit_amount:0
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: analytic_plan
+#: field:account.analytic.account,quantity_plan:0
+msgid "Quantity Debit"
+msgstr "Menge im Soll"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,ref:0
+msgid "Ref."
+msgstr "Ref."
+
+#. module: analytic_plan
+#: selection:account.analytic.plan.journal,type:0
+msgid "Sale"
+msgstr "Verkauf"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Sales"
+msgstr "Verkäufe"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Search Planning Analytic Lines"
+msgstr "Suche in Kostenplanpositionen"
+
+#. module: analytic_plan
+#: selection:account.analytic.plan.journal,type:0
+msgid "Situation"
+msgstr "Situation"
+
+#. module: analytic_plan
+#: field:analytic.plan.copy.version,source_version_id:0
+msgid "Source Planning Version"
+msgstr "Ursprungsplanversion"
+
+#. module: analytic_plan
+#: model:ir.actions.act_window,help:analytic_plan.action_account_analytic_plan_journal_tree
+msgid ""
+"To print a planning analytics (or costs) journal for a given period. The "
+"report give code, move name, account number, general amount and analytic "
+"amount."
+msgstr ""
+"Um ein Planungs-Kostenrechnungs- (oder Kosten-) Journal zu angegebener "
+"Periode zu drucken. Der Bericht liefert Schlüssel, Buchungsbezeichnung, "
+"Konto, Stamm- und Kostenrechnungsbetrag."
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_tree
+msgid "Total"
+msgstr "Gesamt"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_tree
+msgid "Total Quantity"
+msgstr "Gesamtmenge"
+
+#. module: analytic_plan
+#: view:account.analytic.plan.journal:analytic_plan.view_account_analytic_plan_journal_search
+#: field:account.analytic.plan.journal,type:0
+msgid "Type"
+msgstr "Art"
+
+#. module: analytic_plan
+#: field:account.analytic.line.plan,product_uom_id:0
+msgid "UoM"
+msgstr "ME"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+#: field:account.analytic.line.plan,user_id:0
+msgid "User"
+msgstr "Benutzer"
+
+#. module: analytic_plan
+#: view:account.analytic.line.plan:analytic_plan.view_account_analytic_line_plan_filter
+msgid "Version"
+msgstr "Version"
+
+#. module: analytic_plan
+#: view:account.analytic.account:analytic_plan.view_account_analytic_account_form_analytic_plan
+msgid "and revenues"
+msgstr "und Umsätze"

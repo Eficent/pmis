@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_resource_plan_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-12 09:22+0100\n"
+"PO-Revision-Date: 2016-02-12 09:58+0100\n"
+"Language-Team: rs@techno-flex.de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: analytic_resource_plan_stock
+#: model:ir.model,name:analytic_resource_plan_stock.model_analytic_resource_plan_line
+msgid "Analytic Resource Planning lines"
+msgstr "Ressourcenplanungspositionen"
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,qty_available:0
+msgid ""
+"Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at "
+"this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the "
+"Stock Location of this Warehouse, or any of its children.\n"
+"In a context with a single Shop, this includes goods stored in the Stock "
+"Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' "
+"type."
+msgstr ""
+"Derzeitige Produktmengen.\n"
+"Im Umfeld eines einzelnen Lagerplatzes, schließt dies Ware dieses "
+"Lagerplatzes oder eines der untergeordneten ein.\n"
+"Im Umfeld eines einzelnen Lagers, schließt dies Ware der Lagerplätze dieses "
+"Lagers oder eines der untergeordneten ein. \n"
+"Im Umfeld eines einzelnen Shops, schließt dies Ware der Lagerplätze des "
+"Lagers dieses Shops oder eines der untergeordneten ein. \n"
+"Anderenfalls schließt dies alle Waren ein, die sich auf 'internen' "
+"Lagerplätzen gelagert sind."
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,outgoing_done_qty:0
+msgid "Delivered/Consumed"
+msgstr "Geliefert/Verbraucht"
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,virtual_available:0
+msgid ""
+"Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming)\n"
+"In a context with a single Stock Location, this includes goods stored in "
+"this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the "
+"Stock Location of this Warehouse, or any of its children.\n"
+"In a context with a single Shop, this includes goods stored in the Stock "
+"Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' "
+"type."
+msgstr ""
+"Vorhergesagte Produktmengen. (Berechnet als verfügbare - abgehende + "
+"eingehende Mengen)\n"
+"Im Umfeld eines einzelnen Lagerplatzes, schließt dies Ware dieses "
+"Lagerplatzes oder eines der untergeordneten ein.\n"
+"Im Umfeld eines einzelnen Lagers, schließt dies Ware der Lagerplätze dieses "
+"Lagers oder eines der untergeordneten ein. \n"
+"Im Umfeld eines einzelnen Shops, schließt dies Ware der Lagerplätze des "
+"Lagers dieses Shops oder eines der untergeordneten ein. \n"
+"Anderenfalls schließt dies alle Waren ein, die sich auf 'internen' "
+"Lagerplätzen gelagert sind."
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,virtual_available:0
+msgid "Forecasted Quantity"
+msgstr "Vorhergesagte Mengen"
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,incoming_qty:0
+msgid "Incoming"
+msgstr "Eingehend"
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,outgoing_qty:0
+msgid "Outgoing"
+msgstr "Abgehend"
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,qty_available:0
+msgid "Quantity On Hand"
+msgstr "Verfügbare Menge"
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,incoming_qty:0
+msgid ""
+"Quantity of products that are planned to arrive.\n"
+"In a context with a single Stock Location, this includes goods arriving to "
+"this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods arriving to the "
+"Stock Location of this Warehouse, or any of its children.\n"
+"In a context with a single Shop, this includes goods arriving to the Stock "
+"Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods arriving to any Stock Location with "
+"'internal' type."
+msgstr ""
+"Geplante Produktmengen-Zugänge.\n"
+"Im Umfeld eines einzelnen Lagerplatzes, schließt dies Ware dieses "
+"Lagerplatzes oder eines der untergeordneten ein.\n"
+"Im Umfeld eines einzelnen Lagers, schließt dies Ware der Lagerplätze dieses "
+"Lagers oder eines der untergeordneten ein. \n"
+"Im Umfeld eines einzelnen Shops, schließt dies Ware der Lagerplätze des "
+"Lagers dieses Shops oder eines der untergeordneten ein. \n"
+"Anderenfalls schließt dies alle Waren ein, die sich auf 'internen' "
+"Lagerplätzen gelagert sind."
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,outgoing_qty:0
+msgid ""
+"Quantity of products that are planned to leave.\n"
+"In a context with a single Stock Location, this includes goods leaving this "
+"Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods leaving the Stock "
+"Location of this Warehouse, or any of its children.\n"
+"In a context with a single Shop, this includes goods leaving the Stock "
+"Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods leaving any Stock Location with 'internal' "
+"type."
+msgstr ""
+"Geplante Produktmengen-Abgänge.\n"
+"Im Umfeld eines einzelnen Lagerplatzes, schließt dies Ware dieses "
+"Lagerplatzes oder eines der untergeordneten ein.\n"
+"Im Umfeld eines einzelnen Lagers, schließt dies Ware der Lagerplätze dieses "
+"Lagers oder eines der untergeordneten ein. \n"
+"Im Umfeld eines einzelnen Shops, schließt dies Ware der Lagerplätze des "
+"Lagers dieses Shops oder eines der untergeordneten ein. \n"
+"Anderenfalls schließt dies alle Waren ein, die sich auf 'internen' "
+"Lagerplätzen gelagert sind."
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,outgoing_done_qty:0
+msgid "Quantity of products that have been consumed or delivered."
+msgstr "Verbrauchte oder ausgelieferte Produktmengen."
+
+#. module: analytic_resource_plan_stock
+#: help:analytic.resource.plan.line,incoming_done_qty:0
+msgid "Quantity of products that have been produced or have arrived."
+msgstr "Gefertigte oder zugegangene Produktmengen."
+
+#. module: analytic_resource_plan_stock
+#: field:analytic.resource.plan.line,incoming_done_qty:0
+msgid "Received/Produced"
+msgstr "Zugegangen/Gefertigt"

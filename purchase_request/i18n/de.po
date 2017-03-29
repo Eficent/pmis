@@ -1,0 +1,468 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-12 15:11+0100\n"
+"PO-Revision-Date: 2016-02-12 15:25+0100\n"
+"Language-Team: rs@techno-flex.de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: rs@techno-flex.de\n"
+"Language: de\n"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,help:purchase_request.purchase_request_form_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Click to start a new purchase request process.\n"
+"              </p><p>\n"
+"                A purchase request is an instruction to Purchasing to "
+"procure\n"
+"                a certain quantity of materials services, so that they "
+"are\n"
+"                available at a certain point in time.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klicken, um eine neue Beschaffungsanfrage einzuleiten.\n"
+"              </p><p>\n"
+"                Eine Beschaffungsanfrage ist eine Aufforderung an den "
+"Einkauf\n"
+"                eine bestimmte Menge Material oder Leistung zu "
+"beschaffen,\n"
+"                so dass diese zu bestimmter Zeit verfügbar sind.\n"
+"              </p>\n"
+"            "
+
+#. module: purchase_request
+#: field:purchase.request.line,analytic_account_id:0
+#: view:website:purchase_request.report_purchaserequests
+msgid "Analytic Account"
+msgstr "Kostenstelle"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+msgid "Approve"
+msgstr "Freigeben"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Approved"
+msgstr "Freigegeben"
+
+#. module: purchase_request
+#: field:purchase.request,assigned_to:0
+msgid "Approver"
+msgstr "Freigebender"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+#: field:purchase.request.line,assigned_to:0
+msgid "Assigned to"
+msgstr "Zugewiesen an"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Assigned to:"
+msgstr "Zugewiesen an:"
+
+#. module: purchase_request
+#: field:purchase.request,company_id:0
+#: field:purchase.request.line,company_id:0
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: purchase_request
+#: field:purchase.request,create_uid:0
+#: field:purchase.request.line,create_uid:0
+msgid "Created by"
+msgstr "Angelegt durch"
+
+#. module: purchase_request
+#: field:purchase.request,create_date:0
+#: field:purchase.request.line,create_date:0
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Creation Date:"
+msgstr "Anlagedatum:"
+
+#. module: purchase_request
+#: field:purchase.request,date_start:0
+msgid "Creation date"
+msgstr "Anlagedatum"
+
+#. module: purchase_request
+#: help:purchase.request,message_last_post:0
+#: help:purchase.request.line,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Datum der letzten Meldung zu diesem Datensatz."
+
+#. module: purchase_request
+#: help:purchase.request,date_start:0
+#: help:purchase.request.line,date_start:0
+msgid "Date when the user initiated the request."
+msgstr "Datum, an dem der Anwender die Anforderung eingereicht hat."
+
+#. module: purchase_request
+#: field:purchase.request,description:0
+#: field:purchase.request.line,description:0
+#: field:purchase.request.line,name:0
+#: view:website:purchase_request.report_purchaserequests
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Description:"
+msgstr "Beschreibung:"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: purchase_request
+#: field:purchase.request,message_follower_ids:0
+#: field:purchase.request.line,message_follower_ids:0
+msgid "Followers"
+msgstr "Follower"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Group By..."
+msgstr "Gruppiere..."
+
+#. module: purchase_request
+#: help:purchase.request,message_summary:0
+#: help:purchase.request.line,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Beinhaltet die Meldungsübersicht (Anzahl Nachrichten, ...). Diese liegt in "
+"HTML vor, um direkt in Kanban-Sichten eingesetzt zu werden."
+
+#. module: purchase_request
+#: field:purchase.request,id:0 field:purchase.request.line,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_request
+#: help:purchase.request,message_unread:0
+#: help:purchase.request.line,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Wenn gesetzt, erfordern neue Meldungen Ihre Aufmerksamkeit."
+
+#. module: purchase_request
+#: field:purchase.request,message_is_follower:0
+#: field:purchase.request.line,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Ist ein Follower"
+
+#. module: purchase_request
+#: field:purchase.request,message_last_post:0
+#: field:purchase.request.line,message_last_post:0
+msgid "Last Message Date"
+msgstr "Letztes Meldungsdatum"
+
+#. module: purchase_request
+#: field:purchase.request,write_uid:0
+#: field:purchase.request.line,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: purchase_request
+#: field:purchase.request,write_date:0
+#: field:purchase.request.line,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: purchase_request
+#: field:purchase.request,message_ids:0
+#: field:purchase.request.line,message_ids:0
+msgid "Messages"
+msgstr "Meldungen"
+
+#. module: purchase_request
+#: help:purchase.request,message_ids:0
+#: help:purchase.request.line,message_ids:0
+msgid "Messages and communication history"
+msgstr "Meldungs- und Kommunikationsverlauf"
+
+#. module: purchase_request
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+#: field:purchase.request.line,product_id:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: purchase_request
+#: field:purchase.request.line,product_uom_id:0
+msgid "Product Unit of Measure"
+msgstr "Produktmengeneinheit"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Product UoM"
+msgstr "Produkt-ME"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+#: view:website:purchase_request.report_purchaserequests
+msgid "Products"
+msgstr "Produkte"
+
+#. module: purchase_request
+#: field:purchase.request,line_ids:0
+msgid "Products to Purchase"
+msgstr "Zu kaufende Produkte"
+
+#. module: purchase_request
+#: model:ir.actions.report.xml,name:purchase_request.action_report_purchase_requests
+#: model:ir.model,name:purchase_request.model_purchase_request
+#: model:ir.module.category,name:purchase_request.module_category_purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request:purchase_request.view_purchase_request_tree
+#: field:purchase.request.line,request_id:0
+#: view:website:purchase_request.report_purchaserequests
+msgid "Purchase Request"
+msgstr "Bestellanforderung"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_line
+#: view:purchase.request.line:purchase_request.purchase_request_line_form
+msgid "Purchase Request Line"
+msgstr "Bestellanforderungsposition"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_line_form_action
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line_act
+#: view:purchase.request.line:purchase_request.purchase_request_line_tree
+msgid "Purchase Request Lines"
+msgstr "Bestellanforderungspositionen"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_manager
+msgid "Purchase Request Manager"
+msgstr "Bestellanforderungsmanager"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_user
+msgid "Purchase Request User"
+msgstr "Bestellanforderungsanwender"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.action_purchase_request_line_product_tree
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_form_action
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_act
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_pro_mgt
+msgid "Purchase Requests"
+msgstr "Bestellanforderungen"
+
+#. module: purchase_request
+#: model:ir.ui.menu,name:purchase_request.parent_menu_purchase_request
+msgid "Purchase requests"
+msgstr "Bestellanforderungsposition"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Qty"
+msgstr "Menge"
+
+#. module: purchase_request
+#: field:purchase.request.line,product_qty:0
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+msgid "Reject"
+msgstr "Ablehnen"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Rejected"
+msgstr "Abgelehnt"
+
+#. module: purchase_request
+#: field:purchase.request.line,date_required:0
+#: field:purchase.request.line,date_start:0
+msgid "Request Date"
+msgstr "Anforderungsdatum"
+
+#. module: purchase_request
+#: field:purchase.request,name:0
+msgid "Request Reference"
+msgstr "Anforderungsbezug"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Request Reference:"
+msgstr "Anforderungsbezug:"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+msgid "Request approval"
+msgstr "Anforderungsbewilligung"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Request is approved"
+msgstr "Anforderung ist bewilligt"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Request is rejected"
+msgstr "Anforderung ist abgelehnt"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Request is to be approved"
+msgstr "Anforderung ist zu bewilligen"
+
+#. module: purchase_request
+#: field:purchase.request.line,request_state:0
+msgid "Request state"
+msgstr "Anforderungsstatus"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Requested Date"
+msgstr "Angefordertes Datum"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: field:purchase.request,requested_by:0
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+#: field:purchase.request.line,requested_by:0
+msgid "Requested by"
+msgstr "Angefordert durch"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Requested by:"
+msgstr "Angefordert durch:"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+msgid "Reset"
+msgstr "Reset"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "Search Purchase Request"
+msgstr "Suche Bestellanforderung"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+msgid "Source"
+msgstr "Quelle"
+
+#. module: purchase_request
+#: field:purchase.request,origin:0 field:purchase.request.line,origin:0
+msgid "Source Document"
+msgstr "Quelldokument"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Source:"
+msgstr "Quelle:"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_form
+#: view:purchase.request.line:purchase_request.purchase_request_line_form
+#: field:purchase.request.line,specifications:0
+#: view:website:purchase_request.report_purchaserequests
+msgid "Specifications"
+msgstr "Spezifikationen"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+msgid "Start Date"
+msgstr "Anfangsdatum"
+
+#. module: purchase_request
+#: field:purchase.request,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: purchase_request
+#: field:purchase.request,message_summary:0
+#: field:purchase.request.line,message_summary:0
+msgid "Summary"
+msgstr "Übersicht"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+#: view:purchase.request.line:purchase_request.purchase_request_line_search
+msgid "To Approve"
+msgstr "Zu bewilligen"
+
+#. module: purchase_request
+#: selection:purchase.request,state:0
+msgid "To be approved"
+msgstr "Soll bewilligt werden"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+msgid "Unassigned"
+msgstr "Nicht zugewiesen"
+
+#. module: purchase_request
+#: view:purchase.request:purchase_request.view_purchase_request_search
+msgid "Unassigned Request"
+msgstr "Nicht zugewiesene Anforderung"
+
+#. module: purchase_request
+#: field:purchase.request,message_unread:0
+#: field:purchase.request.line,message_unread:0
+msgid "Unread Messages"
+msgstr "Ungelesene Meldungen"
+
+#. module: purchase_request
+#: field:purchase.request,warehouse_id:0
+#: field:purchase.request.line,warehouse_id:0
+msgid "Warehouse"
+msgstr "Lager"
+
+#. module: purchase_request
+#: view:website:purchase_request.report_purchaserequests
+msgid "Warehouse:"
+msgstr "Lager:"
+
+#. module: purchase_request
+#: field:purchase.request,website_message_ids:0
+#: field:purchase.request.line,website_message_ids:0
+msgid "Website Messages"
+msgstr "Webseiten-Meldungen"
+
+#. module: purchase_request
+#: help:purchase.request,website_message_ids:0
+#: help:purchase.request.line,website_message_ids:0
+msgid "Website communication history"
+msgstr "Webseiten-Kommunikationsverlauf"

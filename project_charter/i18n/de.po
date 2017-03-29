@@ -1,0 +1,387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_charter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 14:17+0100\n"
+"PO-Revision-Date: 2016-02-10 15:06+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: project_charter
+#: help:project.outscope,out_scope:0
+msgid ""
+"\n"
+"It is just as important to agree on what is OUT OF SCOPE as it\n"
+"is to define what is IN SCOPE as stakeholders will often have\n"
+"different ideas regarding what is supposed to be IN the\n"
+"project and what IS NOT. Obtain agreement up front to avoid\n"
+"unnecessary disputes later on.\n"
+"This is a useful task to conduct with key stakeholders and\n"
+"can help clarify issues at any time in the Initiation or\n"
+"Planning Phases.\n"
+"Examples of areas that could be examined and clarified\n"
+"include:\n"
+"\n"
+"* The type of deliverables that are in scope and out of scope\n"
+"* The major life-cycle processes that are in scope and out of\n"
+"   scope\n"
+"* The types of data that are in scope and out of scope\n"
+"* The data sources that are in scope or out of scope\n"
+"* The organisations that are in scope and out of scope\n"
+"* The major functionality that is in scope and out of scope\n"
+"        "
+msgstr ""
+"\n"
+"Es ist ebenso wichtig, sich darauf zu einigen, was vom Leistungsumfang\n"
+"her AUSGEGRENZT ist, wie darauf was EINGESCHLOSSEN ist, da Stakeholder\n"
+"oft unterschiedlicher Meinung darüber sein werden, was das Projekt\n"
+"umfasst und was NICHT. Schaffen Sie im Voraus Einigkeit darüber,\n"
+"um spätere Auseinandersetzungen zu vermeiden.\n"
+"Dies ist eine sinnvolle Aufgabe, sich mit Stakeholdern auseinander zu\n"
+"setzen und kann Angelegenheiten in Initiierungs- oder Planungsphasen\n"
+"klären. Beispielthemen zur Klärung könnten z.B. sein:\n"
+"\n"
+"* Art und Umfang der Liefergenstände, die Ein- oder Ausgeschlossen sind\n"
+"* Die wesentlichen zu berücksichtigenden Prozess-Lebenszyklen\n"
+"* Die ein- oder ausgeschlossenen Datenquellen\n"
+"* Ein- oder ausgeschlossene Organisationen\n"
+"* Ein- oder ausgeschlossene Haupt-Funktionalitäten\n"
+"        "
+
+#. module: project_charter
+#: help:project.success,success:0
+msgid ""
+"\n"
+"PROJECT OBJECTIVES\n"
+"The success of your project will be defined by how well you\n"
+"meet your objectives. The more explicitly you state your\n"
+"objectives at the outset, the less disagreement there will\n"
+"be at the end about whether you have met them. Remember\n"
+"that at this early stage of the project, there are still\n"
+"many “unknown factors”. Be prepared to revise your\n"
+"objectives as you gather more information about what you\n"
+"need to achieve.\n"
+"\n"
+"WRITING PROJECT OBJECTIVES\n"
+"Project objectives are concrete statements that describe\n"
+"what the project is trying to achieve. Objectives should\n"
+"be developed for time, cost, quality (or functionality)\n"
+"and should:\n"
+"\n"
+"* Be aligned to business objectives\n"
+"* Be measurable\n"
+"* Be achievable\n"
+"* Be consistent\n"
+"* Be readily understandable\n"
+"* Be few in number\n"
+"* Have the full support and commitment of key stakeholders\n"
+"\n"
+"Examples:\n"
+"* Maximum Deadline on ...\n"
+"* Maximum Budget = ...\n"
+"        "
+msgstr ""
+"\n"
+"PROJEKTZIELE\n"
+"Der Erfolg eines Projekt wird dadurch bestimmt, wie genau\n"
+"Sie Ihre Ziele erfüllen. Je genauer Sie Ihre Ziele zu Beginn\n"
+"ausdrücken, desto weniger muss im Nachhinein darüber\n"
+"diskutiert werden, ob diese Zeile erreicht sind oder nicht.\n"
+"Bedenken Sie, dass zu dieser frühen Phase des Projekts\n"
+"noch viele \"unbekannte Faktoren\" bestehen. Seien Sie darauf\n"
+"vorbereitet, Ihre Ziele im Verlauf der Informationssammlung\n"
+"im Rahmen der Zieldefinition zu revidieren.\n"
+"\n"
+"ZIELDEFINITION FESTSCHREIBEN\n"
+"Projektziele sind konkrete Aussagen darüber, was dieses\n"
+"Projekt erfüllen soll. Ziele sollten entwickelt werden für\n"
+"die Faktoren Zeit, Kosten, Qualität (oder Funktionalität)\n"
+"und sollten:\n"
+"\n"
+"* an Geschäftsziele angepasst sein\n"
+"* messbar sein\n"
+"* erfüllbar sein\n"
+"* konsistent sein\n"
+"* verständlich sein\n"
+"* geringe Anzahl haben\n"
+"* vollständige Unterstützung und Zustimmung durch wesentliche \n"
+"Stakeholder erfahren.\n"
+"\n"
+"Beispiele:\n"
+"* Späteste Frist am...\n"
+"* Budgethöchstwert = ...\n"
+"        "
+
+#. module: project_charter
+#: help:project.constraints,constraints:0
+msgid ""
+"\n"
+"Project constraints are known facts that will influence how\n"
+"the project is planned and managed. A constraint is a given\n"
+"factor that is outside of the project planner’s scope of\n"
+"control, which unless it is lifted or otherwise removed, will\n"
+"force project actions to work around it.\n"
+"        "
+msgstr ""
+"\n"
+"Projektabhängigkeiten und -begrenzungen sind bekannte Faktoren,\n"
+"die auf die Planung und Verwaltung des Projekts Einfluss nehmen.\n"
+"Eine Begrenzung ist ein gegebener Faktor, der sich nicht im \n"
+"Einflussbereich des Projektplaners befindet. Wird eine solche nicht\n"
+"Aufgehoben oder auf andere Weise behoben, werden \n"
+"Projektaktivitäten diese umgehen müssen.\n"
+"        "
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Assumptions, Constraints"
+msgstr "Annahmen, Begrenzungen"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Billing plan"
+msgstr "Abrechnungsplan"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Billing plan lines"
+msgstr "Abrechnungsplanpositionen"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Charter/Plan"
+msgstr "Satzung/Plan"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Child WBS elements"
+msgstr "Untergeordnete PSP-Elemente"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Class"
+msgstr "Klasse"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Code"
+msgstr "Schlüssel"
+
+#. module: project_charter
+#: model:ir.model,name:project_charter.model_project_constraints
+#: field:project.constraints,constraints:0
+#: view:project.project:project_charter.view_project_form
+msgid "Constraints"
+msgstr "Begrenzungen"
+
+#. module: project_charter
+#: field:project.constraints,create_uid:0 field:project.outscope,create_uid:0
+#: field:project.success,create_uid:0
+msgid "Created by"
+msgstr "Angelegt durch"
+
+#. module: project_charter
+#: field:project.constraints,create_date:0
+#: field:project.outscope,create_date:0 field:project.success,create_date:0
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: project_charter
+#: field:project.success,success:0
+msgid "Criteria"
+msgstr "Kriterien"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Deliverables"
+msgstr "Liefergegenstände"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "End Date"
+msgstr "Enddatum"
+
+#. module: project_charter
+#: field:project.constraints,id:0 field:project.outscope,id:0
+#: field:project.success,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: project_charter
+#: field:project.constraints,write_uid:0 field:project.outscope,write_uid:0
+#: field:project.success,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: project_charter
+#: field:project.constraints,write_date:0 field:project.outscope,write_date:0
+#: field:project.success,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: project_charter
+#: model:ir.ui.menu,name:project_charter.project_management
+msgid "Management"
+msgstr "Verwaltung"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Name"
+msgstr "Bezeichnung"
+
+#. module: project_charter
+#: field:project.project,notes:0
+msgid "Notes"
+msgstr "Hinweise"
+
+#. module: project_charter
+#: field:project.outscope,out_scope:0
+msgid "Out of Scope"
+msgstr "Ausgeschlossen"
+
+#. module: project_charter
+#: model:ir.model,name:project_charter.model_project_outscope
+msgid "Out of scope"
+msgstr "Ausgeschlossen"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Parent"
+msgstr "Übergeordnetes"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Parent WBS element"
+msgstr "Übergeordnetes PSP-Element"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Phases"
+msgstr "Phasen"
+
+#. module: project_charter
+#: model:ir.model,name:project_charter.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Project Exclusions"
+msgstr "Projektausschlüsse"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Project Form View"
+msgstr "Projekt Formularsicht"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Project Purpose"
+msgstr "Projektabsicht"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Project Scope"
+msgstr "Projektumfang"
+
+#. module: project_charter
+#: field:project.project,project_constraints_ids:0
+msgid "Project constraints ids"
+msgstr "Projektbegrenzungs-IDs"
+
+#. module: project_charter
+#: field:project.project,project_outscope_ids:0
+msgid "Project outscope ids"
+msgstr "Projektausschlüss-IDs"
+
+#. module: project_charter
+#: field:project.project,project_success_ids:0
+msgid "Project success ids"
+msgstr "Projekterfolgs-IDs"
+
+#. module: project_charter
+#: field:project.constraints,project_id:0 field:project.outscope,project_id:0
+#: view:project.project:project_charter.view_project_form
+#: field:project.success,project_id:0
+msgid "Projects"
+msgstr "Projekte"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Requirements and Success"
+msgstr "Anforderungen und Erfolg"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Resource and Billing Plan"
+msgstr "Ressourcen und Abrechnungsplan"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Resource and Billing plan"
+msgstr "Ressourcen und Abrechnungsplan"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Resource plan"
+msgstr "Ressourcenplanung"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Resource planning lines"
+msgstr "Ressourcenplanungspositionen"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Scope"
+msgstr "Umfang"
+
+#. module: project_charter
+#: model:ir.ui.menu,name:project_charter.menu_stakeholders_config
+msgid "Stakeholders"
+msgstr "Stakeholder"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Start Date"
+msgstr "Anfangsdatum"
+
+#. module: project_charter
+#: model:ir.model,name:project_charter.model_project_success
+msgid "Success"
+msgstr "Erfolg"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Success and Acceptance Criteria"
+msgstr "Erfolgs- und Abnahmekriterien"
+
+#. module: project_charter
+#: model:ir.ui.menu,name:project_charter.menu_tasks_config_title
+msgid "Tasks"
+msgstr "Aufgaben"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "WBS elements"
+msgstr "PSP-Elemente"
+
+#. module: project_charter
+#: view:project.project:project_charter.edit_project
+msgid "Work Breakdown Structure"
+msgstr "Projektstrukturplan"
+
+#. module: project_charter
+#: view:project.project:project_charter.view_project_form
+msgid "Work Packages"
+msgstr "Arbeitspakete"

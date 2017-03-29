@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* operations_board
+#
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-04 12:38+0000\n"
+"PO-Revision-Date: 2016-02-10 13:57+0100\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Deutsch <rs@techno-flex.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_analytic
+#: model:ir.ui.menu,name:operations_board.menu_ceo_analytic
+msgid "Analytics"
+msgstr "Analysen"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_balance
+msgid "CEO balance"
+msgstr "GF Saldo"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_form
+msgid "CEO board"
+msgstr "GF Vorstand"
+
+#. module: operations_board
+#: model:ir.ui.menu,name:operations_board.menu_ceo_crm
+msgid "CRM"
+msgstr "CRM"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_form
+#: model:ir.actions.act_window,name:operations_board.ceo_lead_board
+msgid "CRM - Open Leads"
+msgstr "CRM - Laufende Vorverhandlungen"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_form
+#: model:ir.actions.act_window,name:operations_board.ceo_oppor_board
+msgid "CRM - Opportunities"
+msgstr "CRM - Gelegenheiten"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_project_issues
+#: model:ir.ui.menu,name:operations_board.menu_ceo_issues
+msgid "Issues"
+msgstr "Angelegenheiten"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_case_lead
+#: model:ir.ui.menu,name:operations_board.menu_ceo_leads
+msgid "Leads"
+msgstr "Vorverhandlungen"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_form
+#: model:ir.actions.act_window,name:operations_board.ceo_issues_board
+msgid "Open Issues"
+msgstr "Laufende Angelegenheiten"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_form
+#: model:ir.actions.act_window,name:operations_board.ceo_tasks_board
+msgid "Open Tasks"
+msgstr "Anstehende Aufgaben"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.open_board_balance
+#: model:ir.ui.menu,name:operations_board.menu_subboard_balance
+msgid "Operations Balance"
+msgstr "Stand der Vorgänge"
+
+#. module: operations_board
+#: model:ir.ui.menu,name:operations_board.menu_board_ceo
+msgid "Operations Board"
+msgstr "Vorgänge im Vorstand"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.open_board_ceo
+#: model:ir.ui.menu,name:operations_board.menu_subboard_ceo
+msgid "Operations Management Board"
+msgstr "Vorgänge der Geschäftsführung"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_case_oppor
+#: model:ir.ui.menu,name:operations_board.menu_ceo_oppor
+msgid "Opportunities"
+msgstr "Gelegenheiten"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_balance
+#: model:ir.actions.act_window,name:operations_board.ceo_project_board
+msgid "Project balance"
+msgstr "Projektstand"
+
+#. module: operations_board
+#: view:board.board:operations_board.board_ceo_balance
+#: model:ir.actions.act_window,name:operations_board.ceo_analytic_board
+msgid "Project income"
+msgstr "Projekterträge"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_projects
+#: model:ir.ui.menu,name:operations_board.menu_ceo_project
+msgid "Projects"
+msgstr "Projekte"
+
+#. module: operations_board
+#: model:ir.ui.menu,name:operations_board.menu_ceo_pna
+msgid "Projects and Analytic"
+msgstr "Projekte und Kostenstellen"
+
+#. module: operations_board
+#: model:ir.ui.menu,name:operations_board.menu_ceo_reports
+msgid "Reports"
+msgstr "Berichte"
+
+#. module: operations_board
+#: model:ir.actions.act_window,name:operations_board.ceo_tasks
+#: model:ir.ui.menu,name:operations_board.menu_ceo_tasks
+msgid "Tasks"
+msgstr "Aufgaben"

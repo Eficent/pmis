@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_time_easy_scheduling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 15:25+0100\n"
+"PO-Revision-Date: 2016-02-10 15:29+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: project_time_easy_scheduling
+#: model:ir.actions.act_window,name:project_time_easy_scheduling.action_view_activity
+#: model:ir.ui.menu,name:project_time_easy_scheduling.menu_action_view_activities
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_tree
+msgid "Activity"
+msgstr "Aktivität"
+
+#. module: project_time_easy_scheduling
+#: model:ir.actions.act_window,name:project_time_easy_scheduling.action_activity_scheduling_view
+#: model:ir.ui.menu,name:project_time_easy_scheduling.menu_action_view_activity_scheduling
+msgid "Activity Scheduling"
+msgstr "Aktivitätenplanung"
+
+#. module: project_time_easy_scheduling
+#: model:ir.actions.act_window,name:project_time_easy_scheduling.act_project_2_easy_scheduling
+msgid "Easy scheduling"
+msgstr "Easy-Planung"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+#: view:project.task:project_time_easy_scheduling.view_activity_tree
+msgid "For linking to a predecessor task"
+msgstr "Zum Verknüpfen mit Vorgänger-Aufgabe"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+#: view:project.task:project_time_easy_scheduling.view_activity_tree
+msgid "Link"
+msgstr "Verknüpfung"
+
+#. module: project_time_easy_scheduling
+#: model:ir.actions.act_window,help:project_time_easy_scheduling.action_view_activity
+msgid "Manage Project activities, including tasks and milestones"
+msgstr "Verwaltung von Projektaktivitäten, einschließlich Aufgaben und Meilensteinen"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+#: view:project.task:project_time_easy_scheduling.view_activity_tree
+msgid "Predecessor IDs"
+msgstr "Vorgänger-IDs"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+#: view:project.task:project_time_easy_scheduling.view_activity_tree
+msgid "Predecessors"
+msgstr "Vorgänger"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+msgid "Schedule network"
+msgstr "Zeitplanung-Netzplan"
+
+#. module: project_time_easy_scheduling
+#: model:ir.actions.act_window,help:project_time_easy_scheduling.action_activity_scheduling_view
+msgid "Schedule project activities, including tasks and milestones"
+msgstr "Projektaktivitäten planen, einschließlich Aufgaben und Meilensteinen"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_tree
+msgid "Scheduling"
+msgstr "Zeitplanung"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_search
+#: view:project.task:project_time_easy_scheduling.view_activity_search
+msgid "Task Edition"
+msgstr "Aufgabenbearbeitung"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_search
+msgid "WBS Path code"
+msgstr "PSP-Pfadschlüssel"
+
+#. module: project_time_easy_scheduling
+#: view:project.task:project_time_easy_scheduling.view_activity_scheduling_search
+msgid "WBS Path name"
+msgstr "PSP-Pfadbezeichnung"
