@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Work Breakdown Structure',
-    'version': '1.0',
+    'version': '9.0.1.0.0',
     'author': 'Deneroteam. <dhaval@deneroteam.com>',
     'website': 'http://deneroteam.com/',
     'category': 'Project Management',
@@ -10,6 +10,7 @@
         'project',
         'account',
         'analytic',
+        'account_analytic_parent',
         'project_issue',
         'web_one2many_kanban'
     ],
@@ -19,14 +20,9 @@
         'view/account_analytic_account_view.xml',
         'view/project_project_view.xml',
         # 'view/project_configuration.xml',
-        # 'security/ir.model.access.csv',
-    ],
-    'demo': [
     ],
     'css': [
         'static/src/css/project_kanban.css',
-    ],
-    'test': [
     ],
     'installable': True,
     'application': True,

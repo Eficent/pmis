@@ -22,10 +22,8 @@
                     <field name="complete_wbs_code" string="WBS code"/>
                     <!-- <field name="account_class" string="Class" attrs="{'invisible':[('type','not in',['contract','template'])]}"/> -->
                     <field name="portfolio_analytic_account_id"
-                           attrs="{'invisible':[('type','not in',['contract','template'])]}"
                            domain="[('account_class', '=', 'portfolio')]"/>
                     <field name="program_analytic_account_id"
-                           attrs="{'invisible':[('type','not in',['contract','template'])]}"
                            domain="[('account_class', '=', 'program')]"/>
                     <field name="project_analytic_account_id"
                            domain="[('account_class', '=', 'project')]"/>
@@ -92,7 +90,7 @@
                     <!-- <field name="state" invisible="True"/> -->
                     <!--<field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
                     <field name="complete_wbs_code" string="WBS code" readonly="1"/>
-                    <field name="parent_id" string="Parent Analytic Account"/>
+                    <!--<field name="parent_id" string="Parent Analytic Account"/>-->
                 </field>
                 <!--<notebook position="inside">-->
                     <!--<page string="Child Stages" name="child_stages">-->

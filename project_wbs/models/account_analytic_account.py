@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
+from openerp import api, fields, models, _
 
 
 class AccountAnalyticAccount(models.Model):
@@ -192,12 +192,6 @@ class AccountAnalyticAccount(models.Model):
         help='The classification allows you to create a proper project '
              'Work Breakdown Structure'
     )
-    parent_id = fields.Many2one(
-        'account.analytic.account',
-        string='Parent Analytic Account'
-    )
-    child_ids = fields.One2many('account.analytic.account', 'parent_id', 'Child Accounts', copy=True)
-    # currency_id = fields.Many2one(related="company_id.currency_id", string="Currency", readonly=False)
 
     _order = 'complete_wbs_code'
 
@@ -262,16 +256,3 @@ class AccountAnalyticAccount(models.Model):
 
     #         res.append((account.id, data))
     #     return res
-
-    @api.multi
-    @api.onchange('parent_id')
-    def on_change_parent(self):
-        res = {'value': {}}
-        for parent in self:
-            if parent.partner_id:
-                partner = parent.partner_id and parent.partner_id.id or False
-            else:
-                partner = False
-            if partner:
-                res['value']['partner_id'] = partner
-        return res

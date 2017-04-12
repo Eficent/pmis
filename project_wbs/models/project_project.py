@@ -9,7 +9,7 @@
 import time
 from datetime import datetime, date
 from openerp.tools.translate import _
-from odoo import api, fields, models, _
+from openerp import api, fields, models, _
 
 
 class Project(models.Model):
@@ -353,6 +353,7 @@ class Project(models.Model):
     def action_openChildTreeView(self):
         return self.action_openChildView('project_wbs', 'open_view_project_wbs')
 
+    @api.multi
     def action_openChildKanbanView(self):
         return self.action_openChildView('project_wbs', 'open_view_wbs_kanban')
 
