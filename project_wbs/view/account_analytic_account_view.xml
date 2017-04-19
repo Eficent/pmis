@@ -2,9 +2,6 @@
 <odoo>
     <data>
 
-#---------------------------------------------------------------------------------------------------------
-#   Extend the analytic account
-#---------------------------------------------------------------------------------------------------------
         <record id="view_account_analytic_account_list" model="ir.ui.view">
             <field name="name">account.analytic.account.list</field>
             <field name="model">account.analytic.account</field>
@@ -21,10 +18,6 @@
                 <field name="partner_id" position="after">
                     <field name="complete_wbs_code" string="WBS code"/>
                     <!-- <field name="account_class" string="Class" attrs="{'invisible':[('type','not in',['contract','template'])]}"/> -->
-                    <field name="portfolio_analytic_account_id"
-                           domain="[('account_class', '=', 'portfolio')]"/>
-                    <field name="program_analytic_account_id"
-                           domain="[('account_class', '=', 'program')]"/>
                     <field name="project_analytic_account_id"
                            domain="[('account_class', '=', 'project')]"/>
                     <!--<field name="stage_id" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
@@ -44,10 +37,6 @@
                     <field name="account_class" string="Class"/>
                     <field name="project_analytic_account_id"
                            domain="[('account_class', '=', 'project')]"/>
-                    <field name="portfolio_analytic_account_id"
-                           domain="[('account_class', '=', 'portfolio')]"/>
-                    <field name="program_analytic_account_id"
-                           domain="[('account_class', '=', 'program')]"/>
                     <!--<field name="stage_id" domain="[]" attrs="{'invisible': [('account_class','!=','work_package')]}"/>-->
                 </field>
             </field>
@@ -81,10 +70,6 @@
             <field name="arch" type="xml">
                 <field name="tag_ids" position="after">
                     <field name="account_class" string="Class"/>
-                    <field name="portfolio_analytic_account_id"
-                           domain="[('account_class', '=', 'portfolio')]"/>
-                    <field name="program_analytic_account_id"
-                           domain="[('account_class', '=', 'program')]"/>
                     <field name="project_analytic_account_id"
                            domain="[('account_class', '=', 'project')]"/>
                     <!-- <field name="state" invisible="True"/> -->
@@ -107,8 +92,6 @@
             <field name="arch" type="xml">
                 <xpath expr="//group" position="inside">
                     <filter string="Master Project" name="Master Project" context="{'group_by':'project_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
-                    <filter string="Master Program" name="Master Program" context="{'group_by':'program_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
-                    <filter string="Master Portfolio" name="Master Portfolio" context="{'group_by':'portfolio_analytic_account_id', 'order_by':'complete_wbs_code asc'}"/>
                 </xpath>
             </field>
         </record>

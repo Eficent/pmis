@@ -103,28 +103,6 @@ class AccountAnalyticAccount(models.Model):
 
     @api.multi
     @api.depends('account_class')
-    def _get_portfolio_account_id(self):
-        for account in self:
-            acc = account
-            while acc:
-                if acc.account_class == 'portfolio':
-                    account.portfolio_analytic_account_id = acc.id
-                    break
-                acc = acc.parent_id
-
-    @api.multi
-    @api.depends('account_class')
-    def _get_program_account_id(self):
-        for account in self:
-            acc = account
-            while acc:
-                if acc.account_class == 'program':
-                    account.program_analytic_account_id = acc.id
-                    break
-                acc = acc.parent_id
-
-    @api.multi
-    @api.depends('account_class')
     def _get_project_account_id(self):
         for account in self:
             acc = account
@@ -135,60 +113,54 @@ class AccountAnalyticAccount(models.Model):
                 acc = acc.parent_id
 
     wbs_indent = fields.Char(
-        compute="_wbs_indent_calc",
+        compute=_wbs_indent_calc,
         string='Level',
         readonly=True
     )
     complete_wbs_code_calc = fields.Char(
-        compute="_complete_wbs_code_calc",
+        compute=_complete_wbs_code_calc,
         string='Full WBS Code',
         help='Computed WBS code'
     )
     complete_wbs_code = fields.Char(
-        compute="_complete_wbs_code_calc",
+        compute=_complete_wbs_code_calc,
         string='Full WBS Code',
         help='The full WBS code describes the full path of this component '
              'within the project WBS hierarchy',
         store=True
     )
     complete_wbs_name = fields.Char(
-        compute="_complete_wbs_name_calc",
+        compute=_complete_wbs_name_calc,
         string='Full WBS path',
         help='Full path in the WBS hierarchy',
         store=True
     )
     project_analytic_account_id = fields.Many2one(
         'account.analytic.account',
-        compute="_get_project_account_id",
+        compute=_get_project_account_id,
         string='Root Project',
         help='Root Project in the WBS hierarchy',
         store=True
     )
-    program_analytic_account_id = fields.Many2one(
-        'account.analytic.account',
-        compute="_get_program_account_id",
-        relation='account.analytic.account',
-        string='Program',
-        help='Root Program in the WBS hierarchy',
-        store=True
-    )
-    portfolio_analytic_account_id = fields.Many2one(
-        'account.analytic.account',
-        compute="_get_portfolio_account_id",
-        string='Portfolio',
-        help='Root Portfolio in the WBS hierarchy',
-        store=True
-    )
+    # program_analytic_account_id = fields.Many2one(
+    #     'account.analytic.account',
+    #     compute=_get_program_account_id,
+    #     relation='account.analytic.account',
+    #     string='Program',
+    #     help='Root Program in the WBS hierarchy',
+    #     store=True
+    # )
+    # portfolio_analytic_account_id = fields.Many2one(
+    #     'account.analytic.account',
+    #     compute=et_portfolio_account_id,
+    #     string='Portfolio',
+    #     help='Root Portfolio in the WBS hierarchy',
+    #     store=True
+    # )
     account_class = fields.Selection(
-        [
-            ('portfolio', 'Portfolio'),
-            ('program', 'Program'),
-            ('project', 'Project'),
-            ('phase', 'Phase'),
-            ('deliverable', 'Deliverable'),
-            ('work_package', 'Work Package')
-        ],
-        string='Class',
+        [('project', 'Project'), ('phase', 'Phase'),
+         ('deliverable', 'Deliverable'),
+         ('work_package', 'Work Package')], 'Class',
         help='The classification allows you to create a proper project '
              'Work Breakdown Structure'
     )
