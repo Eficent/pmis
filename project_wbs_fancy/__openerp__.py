@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Fancy Project WBS',
-    'version': '8.0.1.0.4',
+    'version': '9.0.1.0.4',
     'summary': 'Enhance the Project WBS UI',
     'author':   'Matmoz d.o.o., '
                 'Project Expert Team',
@@ -16,5 +16,5 @@
         'views/project_view.xml'
     ],
     'demo': [],
-    'installable': False,
+    'installable': True,
 }

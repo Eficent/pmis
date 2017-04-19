@@ -80,10 +80,8 @@ class AccountAnalyticAccount(models.Model):
     def write(self, values):
         # Find the previous stage
         old_stage_id = {}
-        old_state_id = {}
         for acc in self:
             old_stage_id[acc.id] = acc.stage_id and acc.stage_id.id or False
-            old_state_id[acc.id] = acc.state
 
         res = super(AccountAnalyticAccount, self).write(values)
 
