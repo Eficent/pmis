@@ -16,6 +16,7 @@ class Project(models.Model):
     _name = "project.project"
     _inherit = "project.project"
     _description = "WBS element"
+    _order = "c_wbs_code"
 
     @api.multi
     def _get_project_analytic_wbs(self):
@@ -137,18 +138,18 @@ class Project(models.Model):
                 return analytic_account_ids[0][0]
         return None
 
-    # @api.multi
-    # def _get_parent_members(self):
-    #     context = self.env.context or {}
-    #     member_ids = []
-    #     project_obj = self.env['project.project']
-    #     if 'default_parent_id' in context and context['default_parent_id']:
-    #         for project in project_obj.search(
-    #             [('analytic_account_id', '=', context['default_parent_id'])]
-    #         ):
-    #             for member in project.members:
-    #                 member_ids.append(member.id)
-    #     return member_ids
+    @api.multi
+    def _get_parent_members(self):
+        context = self.env.context or {}
+        member_ids = []
+        project_obj = self.env['project.project']
+        if 'default_parent_id' in context and context['default_parent_id']:
+            for project in project_obj.search(
+                [('analytic_account_id', '=', context['default_parent_id'])]
+            ):
+                for member in project.members:
+                    member_ids.append(member.id)
+        return member_ids
 
     @api.multi
     def _get_analytic_complete_wbs_code(self):
@@ -171,20 +172,22 @@ class Project(models.Model):
     project_child_complete_ids = fields.Many2many(
         'project.project',
         string="Project Hierarchy",
-        compute="_child_compute"
+        compute=_child_compute
     )
     c_wbs_code = fields.Char(
-        compute="_get_analytic_complete_wbs_code",
+        compute=_get_analytic_complete_wbs_code,
         string='WBS Code',
         readonly=True,
         store=True
     )
 
-    # _defaults = {
-    #     'members': _get_parent_members,
-    # }
-
-    _order = "c_wbs_code"
+    members = fields.Many2many('res.users', 'project_user_rel', 'project_id',
+                               'uid', 'Project Members', help="""Project's
+                               members are users who can have an access to
+                               the tasks related to this project.""",
+                               default=_get_parent_members,
+                               states={'close':[('readonly',True)],
+                                       'cancelled':[('readonly',True)]})
 
     @api.model
     def name_search(self, name, args=None, operator='ilike', limit=100):
@@ -204,91 +207,68 @@ class Project(models.Model):
 
     # Override the standard behaviour of duplicate_template not introducing
     # the (copy) string to the copied projects.
-    # def duplicate_template(self, cr, uid, ids, context=None):
-    #     if context is None:
-    #         context = {}
-    #     data_obj = self.pool.get('ir.model.data')
-    #     result = []
-    #     for proj in self.browse(cr, uid, ids, context=context):
-    #         parent_id = context.get('parent_id', False)
-    #         context.update({'analytic_project_copy': True})
-    #         new_date_start = time.strftime('%Y-%m-%d')
-    #         new_date_end = False
-    #         if proj.date_start and proj.date:
-    #             start_date = date(
-    #                 *time.strptime(proj.date_start, '%Y-%m-%d')[:3]
-    #             )
-    #             end_date = date(*time.strptime(proj.date, '%Y-%m-%d')[:3])
-    #             new_date_end = (
-    #                 datetime(
-    #                     *time.strptime(
-    #                         new_date_start,
-    #                         '%Y-%m-%d'
-    #                     )[:3]
-    #                 ) + (end_date - start_date)
-    #             ).strftime('%Y-%m-%d')
-    #         context.update({'copy': True})
-    #         new_id = self.copy(
-    #             cr, uid, proj.id, default={
-    #                 'name': _("%s") % proj.name,
-    #                 'state': 'open',
-    #                 'date_start': new_date_start,
-    #                 'date': new_date_end,
-    #                 'parent_id': parent_id
-    #             }, context=context
-    #         )
-    #         result.append(new_id)
-
-    #         child_ids = self.search(
-    #             cr, uid,
-    #             [('parent_id', '=', proj.analytic_account_id.id)],
-    #             context=context
-    #         )
-    #         parent_id = self.read(
-    #             cr, uid, new_id,
-    #             ['analytic_account_id']
-    #         )['analytic_account_id'][0]
-    #         if child_ids:
-    #             self.duplicate_template(
-    #                 cr, uid, child_ids,
-    #                 context={'parent_id': parent_id}
-    #             )
-
-    #     if result and len(result):
-    #         res_id = result[0]
-    #         form_view_id = data_obj._get_id(
-    #             cr, uid, 'project', 'edit_project'
-    #         )
-    #         form_view = data_obj.read(
-    #             cr, uid, form_view_id, ['res_id']
-    #         )
-    #         tree_view_id = data_obj._get_id(
-    #             cr, uid, 'project', 'view_project'
-    #         )
-    #         tree_view = data_obj.read(
-    #             cr, uid, tree_view_id, ['res_id']
-    #         )
-    #         search_view_id = data_obj._get_id(
-    #             cr, uid, 'project', 'view_project_project_filter'
-    #         )
-    #         search_view = data_obj.read(
-    #             cr, uid, search_view_id, ['res_id']
-    #         )
-    #         return {
-    #             'name': _('Projects'),
-    #             'view_type': 'form',
-    #             'view_mode': 'form,tree',
-    #             'res_model': 'project.project',
-    #             'view_id': False,
-    #             'res_id': res_id,
-    #             'views': [
-    #                 (form_view['res_id'], 'form'),
-    #                 (tree_view['res_id'], 'tree')
-    #             ],
-    #             'type': 'ir.actions.act_window',
-    #             'search_view_id': search_view['res_id'],
-    #             'nodestroy': True
-    #         }
+    @api.multi
+    def duplicate_template(self):
+        data_obj = self.env['ir.model.data']
+        result = []
+        for proj in self:
+            parent_id = self.env.context.get('parent_id', False)
+            self = self.with_context(analytic_project_copy=True)
+            new_date_start = time.strftime('%Y-%m-%d')
+            new_date_end = False
+            if proj.date_start and proj.date:
+                start_date = date(
+                    *time.strptime(proj.date_start, '%Y-%m-%d')[:3]
+                )
+                end_date = date(*time.strptime(proj.date, '%Y-%m-%d')[:3])
+                new_date_end = (
+                    datetime(
+                        *time.strptime(
+                            new_date_start,
+                            '%Y-%m-%d'
+                        )[:3]
+                    ) + (end_date - start_date)
+                ).strftime('%Y-%m-%d')
+            self = self.with_context(copy=True)
+            new_id = proj.copy(default={
+                    'name': _("%s") % proj.name,
+                    'state': 'open',
+                    'date_start': new_date_start,
+                    'date': new_date_end,
+                    'parent_id': parent_id
+                })
+            result.append(new_id)
+            child_ids = self.search(
+                [('parent_id', '=', proj.analytic_account_id.id)])
+            parent_id = new_id.analytic_account_id.id
+            if child_ids:
+                self = self.with_context(parent_id=parent_id)
+                self.duplicate_template(child_ids, context={'parent_id':
+                                                                parent_id})
+        if result and len(result):
+            res_id = result[0]
+            form_view_id = data_obj._get_id('project', 'edit_project')
+            form_view = data_obj.read(form_view_id, ['res_id'])
+            tree_view_id = data_obj._get_id('project', 'view_project')
+            tree_view = data_obj.read(tree_view_id, ['res_id'])
+            search_view_id = data_obj._get_id(
+                'project', 'view_project_project_filter')
+            search_view = data_obj.read(search_view_id, ['res_id'])
+            return {
+                'name': _('Projects'),
+                'view_type': 'form',
+                'view_mode': 'form,tree',
+                'res_model': 'project.project',
+                'view_id': False,
+                'res_id': res_id,
+                'views': [
+                    (form_view['res_id'], 'form'),
+                    (tree_view['res_id'], 'tree')
+                ],
+                'type': 'ir.actions.act_window',
+                'search_view_id': search_view['res_id'],
+                'nodestroy': True
+            }
 
     @api.multi
     def action_openChildView(self, module, act_window):

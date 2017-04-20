@@ -207,24 +207,24 @@ class AccountAnalyticAccount(models.Model):
             res.append((account.id, data))
         return res
 
-    # @api.multi
-    # @api.depends('name')
-    # def name_get(self):
-    #     res = []
-    #     for account in self:
-    #         data = []
-    #         acc = account
-    #         while acc:
-    #             if acc.name:
-    #                 data.insert(0, acc.name)
-    #             else:
-    #                 data.insert(0, '')
-    #             acc = acc.parent_id
+    @api.multi
+    @api.depends('name')
+    def name_get(self):
+        res = []
+        for account in self:
+            data = []
+            acc = account
+            while acc:
+                if acc.name:
+                    data.insert(0, acc.name)
+                else:
+                    data.insert(0, '')
+                acc = acc.parent_id
 
-    #         data = '/'.join(data)
-    #         # res2 = account.code_get()
-    #         # if res2:
-    #         #     data = '[' + res2[0][1] + '] ' + data
+            data = '/'.join(data)
+            res2 = account.code_get()
+            if res2:
+                data = '[' + res2[0][1] + '] ' + data
 
-    #         res.append((account.id, data))
-    #     return res
+            res.append((account.id, data))
+        return res
