@@ -12,6 +12,7 @@
         'analytic',
         'account_analytic_parent',
         'project_issue',
+        # 'project_timesheet',
         'web_one2many_kanban'
     ],
     'summary': 'Project Work Breakdown Structure',

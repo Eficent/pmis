@@ -5,7 +5,6 @@
 #  - Matjaž Mozetič
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-# from lxml import etree
 import time
 from datetime import datetime, date
 from openerp.tools.translate import _
@@ -361,6 +360,7 @@ class Project(models.Model):
             })
         return res
 
+    @api.multi
     def action_openParentKanbanView(self):
         """
         :return dict: dictionary value for created view

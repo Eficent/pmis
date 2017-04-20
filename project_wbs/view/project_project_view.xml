@@ -21,18 +21,6 @@
                             </div>
                         </div>
                     </a>
-
-                    <!--<div class="oe_nav_buttons text-center" name="wbs_navigation_up">-->
-                        <!--<a name="action_openParentKanbanView"-->
-                           <!--type="object"-->
-                           <!--attrs="{'invisible': [('account_class', '=', 'portfolio')]}"-->
-                           <!--&gt;-->
-                            <!--<div class="oe_tag_up text-center oe_wbs_navigation">-->
-                                <!--<field name="parent_id"/>-->
-                                <!--<div class="fa fa-level-up"></div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
                     <div class="oe_nav_buttons text-center" name="wbs_navigation_down">
                         <a name="action_openChildKanbanView"
                            type="object">
@@ -169,87 +157,60 @@
                         </h4>
                     </div>
                 </xpath>
-                <!-- <xpath expr='//field[@name="parent_id"]' position="attributes">
-                    <attribute name="on_change">on_change_parent(parent_id)</attribute>
-                </xpath> -->
                 <!-- <xpath expr='//field[@name="state"]' position="attributes">
                     <attribute name="invisible">True</attribute>
                 </xpath> -->
                 <!--<xpath expr='//group[@name="group_alias"]' position="after">-->
-                <xpath expr='//div[@class="oe_title"]' position="after">
-                    <p class="oe_button_box oe_left" attrs="{'invisible': [('analytic_account_id','=',False)]}">
-                        To invoice or setup invoicing and renewal options, go to the related contract:
-                        <field name="analytic_account_id" readonly="1" required="0" class="oe_inline" nolabel="1"/>.
-                    </p>
-                </xpath>
+                <!--<xpath expr='//div[@class="oe_title"]' position="after">-->
+                    <!--<p class="oe_button_box oe_left" attrs="{'invisible': [('analytic_account_id','=',False)]}">-->
+                        <!--To invoice or setup invoicing and renewal options, go to the related contract:-->
+                        <!--<field name="analytic_account_id" readonly="1" required="0" class="oe_inline" nolabel="1"/>.-->
+                    <!--</p>-->
+                <!--</xpath>-->
                 <xpath expr='//notebook' position="before">
-                    <p>
-                        <group name="root_accounts" string="Root Analytic Accounts" class="smallertext border">
-                            <!--<field name="account_class" string="Class"/>-->
-                            <field name="analytic_account_id" readonly="1" required="0"/>
+                    <group name="root_accounts" string="Project Configuration"
+                           class="smallertext border">
+                        <group>
+                            <field name="account_class" string="Class"/>
                             <field name="project_analytic_account_id"
                                    domain="[('account_class', '=', 'project')]"/>
-                            <!--<field name="code" string="Code"/>-->
-                            <!--<field name="complete_wbs_code" string="WBS code" readonly="1" />-->
-                            <!--<field name="complete_wbs_name" readonly="1" />-->
                         </group>
-                    </p>
+                        <group>
+                            <field name="code" string="Code"/>
+                            <field name="complete_wbs_code" string="WBS code" readonly="1" />
+                        </group>
+                    </group>
                 </xpath>
                 <notebook position="inside">
-                    <page string="Project configuration">
-                        <group string="Project configuration">
-                            <!--<group>-->
-                                <!--<field name="account_class" string="Class"/>-->
-                                <!--<field name="project_analytic_account_id"-->
-                                       <!--domain="[('account_class', '=', 'project')]"/>-->
-                            <!--</group>-->
-                            <!--<group>-->
-                                <!--<field name="code" string="Code"/>-->
-                                <!--<field name="complete_wbs_code" string="WBS code" readonly="1" />-->
-                            <!--</group>-->
+                    <page string="Work Breakdown Structure">
+                        <group>
+                            <button name="%(create_wbs_element)d"
+                              string="Create child WBS element"
+                              type="action"
+                              context="{'default_parent_id': analytic_account_id,'default_partner_id': partner_id,'default_user_id': user_id}"/>
                         </group>
-                        <notebook>
-                            <page string="Work Breakdown Structure">
-                                <group>
-                                    <button name="%(create_wbs_element)d"
-                                      string="Create child WBS element"
-                                      type="action"
-                                      context="{'default_parent_id': analytic_account_id,'default_partner_id': partner_id,'default_user_id': user_id}"/>
-                                </group>
-                                <!-- <tree string="Work Breakdown Structure" editable="bottom"> -->
-                                    <field name="project_child_complete_ids" nolabel="1" widget="one2many_list"/>
-                                <!-- </tree> -->
-                            </page>
+                        <tree string="Work Breakdown Structure" editable="bottom">
+                            <field name="project_child_complete_ids" nolabel="1" widget="one2many_list"/>
+                        </tree>
+                    </page>
 
-                            <page string="Other Info">
-                                <group string="Administration">
-                                    <field name="privacy_visibility" widget="radio"/>
-                                    <!-- <field name="planned_hours" widget="float_time"
-                                            groups="project.group_time_work_estimation_tasks"/> -->
-                                    <!-- <field name="effective_hours" widget="float_time"
-                                            groups="project.group_time_work_estimation_tasks"/> -->
-                                    <field name="resource_calendar_id"
-                                            groups="project.group_time_work_estimation_tasks"/>
-                                </group>
-                                <group string="Miscellaneous" name="misc">
-                                    <field name="date_start" string="Start Date"/>
-                                    <field name="date" string="End Date"/>
-                                    <field name="sequence" groups="base.group_no_one"/>
-                                    <!-- <field name="active" attrs="{'invisible':[('state','in',['open', 'pending', 'template'])]}"/> -->
-                                    
-                                    <field name="company_id" invisible="1"/>
-                                    <field name="currency_id" groups="base.group_multi_currency"/>
-                                    <field name="parent_id" string="Parent" help="Append this project to another one using analytic accounts hierarchy" domain="[('id','!=',analytic_account_id)]" context="{'current_model': 'project.project'}" />
-                                </group>
-                            </page>
+                    <page string="Other Info">
+                        <group string="Miscellaneous" name="misc">
+                            <field name="date_start" string="Start Date"/>
+                            <field name="date" string="End Date"/>
+                            <field name="sequence" groups="base.group_no_one"/>
+                            <!-- <field name="active" attrs="{'invisible':[('state','in',['open', 'pending', 'template'])]}"/> -->
 
-                            <page string="Project Stages" attrs="{'invisible': [('use_tasks', '=', False)]}" name="project_stages">
-                                <group string="Project Task Stages">
-                                    <field name="type_ids" nolabel="1"/>
-                                </group>
-                            </page>
+                            <field name="company_id" invisible="1"/>
+                            <field name="currency_id" groups="base.group_multi_currency"/>
+                            <field name="parent_id" string="Parent" help="Append this project to another one using analytic accounts hierarchy" domain="[('id','!=',analytic_account_id)]" context="{'current_model': 'project.project'}" />
+                        </group>
+                    </page>
 
-                        </notebook>
+                    <page string="Project Stages" attrs="{'invisible': [('use_tasks', '=', False)]}" name="project_stages">
+                        <group string="Project Task Stages">
+                            <field name="type_ids" nolabel="1"/>
+                        </group>
                     </page>
                 </notebook>
             </field>
