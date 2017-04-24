@@ -138,8 +138,7 @@ class AccountAnalyticAccount(models.Model):
     project_analytic_account_id = fields.Many2one(
         'account.analytic.account',
         compute=_get_project_account_id,
-        string='Root Project',
-        help='Root Project in the WBS hierarchy',
+        string='Analytic Account',
         store=True
     )
     # program_analytic_account_id = fields.Many2one(
