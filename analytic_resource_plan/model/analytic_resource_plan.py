@@ -152,11 +152,11 @@ class AnalyticResourcePlanLine(models.Model):
             or False
         )
         general_account_id = (
-            self.product_id.product_tmpl_id.property_account_expense.id
+            self.product_id.product_tmpl_id.property_account_expense_id.id
         )
         if not general_account_id:
             general_account_id = (
-                self.product_id.categ_id.property_account_expense_categ.id
+                self.product_id.categ_id.property_account_expense_categ_id.id
             )
         if not general_account_id:
             raise UserError(

@@ -23,12 +23,12 @@
             <field name="model">account.analytic.account</field>
             <field name="inherit_id" ref="analytic_plan.view_account_analytic_account_form_analytic_plan"/>
             <field name="arch" type="xml">
-                <xpath expr='//div[@name="buttons"]' position='inside'>
+                <button name="%(analytic_plan.act_analytic_plan_cost_revenue)d" position='after'>
                     <button name="%(act_account_analytic_2_analytic_resource_plan_line)d" help="Resource plan lines"
 					type="action" class="oe_inline oe_stat_button" icon="fa-pencil-square-o">
 					<div>Resource plan<br/>lines</div>
 					</button>
-                </xpath>                
+                </button>
             </field>
        </record>
        

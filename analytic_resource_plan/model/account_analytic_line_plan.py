@@ -9,14 +9,6 @@ class AccountAnalyticLinePlan(models.Model):
     resource_plan_id = fields.Many2one(
         'analytic.resource.plan.line',
         'Resource Plan Line',
+        copy=False,
         ondelete='cascade'
     )
-
-    @api.multi
-    def copy(self, default=None):
-        self.ensure_one()
-        if default is None:
-            default = {}
-        default['resource_plan_id'] = False
-        res = super(AccountAnalyticLinePlan, self).copy(default)
-        return res

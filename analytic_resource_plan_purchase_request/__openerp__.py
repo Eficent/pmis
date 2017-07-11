@@ -21,7 +21,7 @@
 
 {
     'name': 'Analytic Resource Planning - Purchase Requests',
-    'version': '8.0.1.0.1',
+    'version': '9.0.1.0.1',
     'author':   'Eficent, '
                 'Project Expert Team',
     'contributors': [
@@ -41,9 +41,5 @@
         'views/purchase_request_view.xml',
         'views/analytic_resource_plan_view.xml',
     ],
-    'demo_xml': [],
-    'test': [],
-    'installable': False,
-    'active': False,
-    'certificate': '',
+    'installable': True,
 }

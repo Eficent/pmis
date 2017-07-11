@@ -30,7 +30,5 @@
     ],
     'test': [
     ],
-    'installable': False,
-    'active': False,
-    'certificate': '',
+    'installable': True,
 }

@@ -6,13 +6,13 @@
 #---------------------------------------------------------------------------------------------------------
 #   Add Project purchase line planning entries
 #---------------------------------------------------------------------------------------------------------
-       <record id="view_analytic_resource_plan_line_form" model="ir.ui.view">
+        <record id="view_analytic_resource_plan_line_form" model="ir.ui.view">
             <field name="name">analytic.resource.plan.line.form</field>
             <field name="model">analytic.resource.plan.line</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
-				<form string="Analytic resource plan line">
-					<header>
+                <form string="Analytic resource plan line">
+                    <header>
                         <button name="action_button_draft" states="confirm"
                                 string="Draft" type="object"
                                 class="oe_highlight"/>
@@ -20,7 +20,7 @@
                                 string="Confirm" type="object" class="oe_highlight"/>
                         <field name="state" widget="statusbar"/>
                     </header>
-					<sheet string="Resource Plan Lines">
+                    <sheet string="Resource Plan Lines">
                         <div class="oe_right oe_button_box" name="buttons"/>
                         <group colspan="2" col="4" name="Product Information">
                             <field name="product_id"/>
@@ -80,7 +80,7 @@
                                 <field name="analytic_line_plan_ids"/>
                             </page>
                     </notebook>
-					</sheet>
+                    </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids"
                                widget="mail_followers" groups="base.group_user"/>
@@ -94,7 +94,7 @@
             <field name="model">analytic.resource.plan.line</field>
             <field name="type">tree</field>
             <field name="arch" type="xml">
-				<tree string="Analytic resource plan line"
+                <tree string="Analytic resource plan line"
                       editable="top"
                       colors = "darkmagenta:has_child == True;blue:state=='draft'">
                     <field name="account_id"/>
@@ -102,9 +102,9 @@
                     <field name="name" invisible="True"/>
                     <field name="resource_type"/>
                     <field name="user_id" attrs="{'readonly':[('resource_type','=','procurement')]}"/>
-	                <field name="product_id"/>
+                    <field name="product_id"/>
                     <field name="name"/>
-					<field name="unit_amount"/>
+                    <field name="unit_amount"/>
                     <button name="action_button_draft" states="confirm"
                             string="Draft" type="object"
                             icon="gtk-ok"/>
@@ -116,7 +116,7 @@
                     <field name="price_unit"/>
                     <field name="has_child"/>
                     <field name="parent_id"/>
-	            </tree>
+                </tree>
             </field>
         </record>
         <record id="view_analytic_resource_plan_line_filter" model="ir.ui.view">
@@ -132,11 +132,11 @@
                         <field name="parent_id"/>
                         <field name="state"/>
                     </group>
-					<group name='filters' expand="0" string="Filters"/>
+                    <group name='filters' expand="0" string="Filters"/>
                     <group name='group_by' expand="0" string="Group By...">
                         <filter string="Parent" name="Parent"
-						context="{'group_by':'parent_id'}"/>
-						<filter string="Analytic Account"
+                        context="{'group_by':'parent_id'}"/>
+                        <filter string="Analytic Account"
                                 domain="[]"
                                 context="{'group_by':'account_id'}"/>
                         <filter string="Product"
@@ -157,29 +157,29 @@
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="view_analytic_resource_plan_line_filter" />
         </record>
-        
-		<record model="ir.actions.act_window.view" id="action_analytic_resource_plan_line_tree">
-	        <field name="sequence" eval="1"/>
-	        <field name="view_mode">tree</field>
-	        <field name="view_id" ref="view_analytic_resource_plan_line_tree"/>
-	        <field name="act_window_id" ref="action_analytic_resource_plan_line_open_form"/>
-	   	</record>
-	   	
-	   	<record model="ir.actions.act_window.view" id="action_analytic_resource_plan_line_form2">
-	        <field name="sequence" eval="2"/>
-	        <field name="view_mode">form</field>
-	        <field name="view_id" ref="view_analytic_resource_plan_line_form"/>
-	        <field name="act_window_id" ref="action_analytic_resource_plan_line_open_form"/>
-	   	</record>
 
-<!--		<menuitem id="analytic_resource_plan_menu" name="Resource Plan"
-          parent="project.menu_project_management"
-          groups="project.group_project_manager"/>-->
+        <record model="ir.actions.act_window.view" id="action_analytic_resource_plan_line_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_analytic_resource_plan_line_tree"/>
+            <field name="act_window_id" ref="action_analytic_resource_plan_line_open_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_analytic_resource_plan_line_form2">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_analytic_resource_plan_line_form"/>
+            <field name="act_window_id" ref="action_analytic_resource_plan_line_open_form"/>
+        </record>
+
+        <menuitem id="analytic_resource_plan_menu" name="Resource Plan"
+          parent="project.menu_projects"
+          groups="project.group_project_manager"/>
 
         <menuitem groups="project.group_project_manager,project.group_project_user"
             action="action_analytic_resource_plan_line_open_form"
             id="analytic_resource_plan_line_entries"
-            parent="analytic_plan.project_plan"
+            parent="analytic_resource_plan_menu"
             sequence="1"/>
 
 	</data>
