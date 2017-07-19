@@ -16,12 +16,11 @@
         <record id="view_project" model="ir.ui.view">
             <field name="name">project.project.tree</field>
             <field name="model">project.project</field>
-            <field name="inherit_id" ref="project_wbs.view_project"/>
-            <field name="field_parent">child_ids</field>
+            <field name="inherit_id" ref="project.view_project"/>
             <field name="arch" type="xml">
-                <field name="date" position="after">
+                <xpath expr='//field[@name="user_id"]' position="after">
                     <field name="stage_id"/>
-                </field>
+                </xpath>
             </field>
         </record>
 
@@ -39,11 +38,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project_wbs.edit_project"/>
             <field name="arch" type="xml">
-                <xpath expr="//page[@name='project_stages']" position="after">
+                <page name='project_stages' position="after">
                     <page string="Child Stages" name="child_stages">
                          <field name="child_stage_ids"/>
                     </page>
-                </xpath>
+                </page>
             </field>
         </record>
 

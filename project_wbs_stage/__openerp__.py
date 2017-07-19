@@ -14,7 +14,7 @@
     "category": "Generic Modules/Projects & Services",
     "summary": """Add the stage to the project wbs
     """,
-    "depends": ["project_wbs"],
+    "depends": ["project_wbs", "analytic", "project"],
     "data": [
         "views/analytic_account_stage_view.xml",
         "views/account_analytic_account_view.xml",

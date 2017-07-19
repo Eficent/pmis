@@ -5,7 +5,7 @@
             <field name="name">account.analytic.account.list</field>
             <field name="model">account.analytic.account</field>
             <field name="inherit_id"
-                   ref="project_wbs.view_account_analytic_account_list"/>
+                   ref="analytic.view_account_analytic_account_list"/>
             <field name="arch" type="xml">
                 <field name="partner_id" position="after">
                     <field name="stage_id"/>
