@@ -11,3 +11,8 @@ class ProductTemplate(models.Model):
         'Expense Plan Journal',
         ondelete='restrict'
     )
+    revenue_analytic_plan_journal_id = fields.Many2one(
+        comodel_name='account.analytic.plan.journal',
+        string='Revenue Plan Journal',
+        ondelete='restrict'
+    )

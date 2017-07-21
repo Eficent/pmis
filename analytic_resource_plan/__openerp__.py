@@ -2,15 +2,11 @@
 
 {
     'name': 'Analytic Resource Planning',
-    'version': '8.0.2.0.4',
+    'version': '9.0.1.0.0',
     'author':   'Eficent, '
                 'Matmoz, '
                 'Luxim, '
                 'Project Expert Team',
-    'contributors': [
-        'Jordi Ballester <jordi.ballester@eficent.com>',
-        'Matjaž Mozetič <m.mozetic@matmoz.si>',
-    ],
     'website': 'http://project.expert',
     'category': 'Project Management',
     'license': 'AGPL-3',
@@ -23,12 +19,6 @@
         'view/project_view.xml',
         'view/resource_plan_default.xml',
         'security/ir.model.access.csv',
-
-    ],
-    'demo': [
-
-    ],
-    'test': [
     ],
     'installable': True,
 }
