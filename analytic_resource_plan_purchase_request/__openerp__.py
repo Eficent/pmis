@@ -37,7 +37,6 @@
         'purchase_request'
     ],
     'data': [
-        'wizard/analytic_resource_plan_line_make_purchase_request.xml',
         'views/purchase_request_view.xml',
         'views/analytic_resource_plan_view.xml',
     ],

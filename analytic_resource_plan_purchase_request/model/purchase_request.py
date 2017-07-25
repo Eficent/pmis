@@ -18,18 +18,13 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import fields, orm
+from openerp import fields, models
 
 
-class PurchaseRequestLine(orm.Model):
+class PurchaseRequestLine(models.Model):
 
     _inherit = 'purchase.request.line'
 
-    _columns = {
-        'analytic_resource_plan_lines': fields.many2many(
-            'analytic.resource.plan.line',
-            'purchase_request_line_analytic_resource_plan_line_line_rel',
-            'purchase_request_line_id',
-            'analytic_resource_plan_line_id',
-            'Purchase Request Lines', readonly=True),
-    }
+    analytic_resource_plan_lines = fields.Many2many(
+        'analytic.resource.plan.line',
+        'Purchase Request Lines')
