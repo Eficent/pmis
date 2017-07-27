@@ -2,10 +2,6 @@
 <openerp>
     <data>
 
-
-#---------------------------------------------------------------------------------------------------------
-#   Add Project purchase line planning entries
-#---------------------------------------------------------------------------------------------------------
         <record id="view_analytic_resource_plan_line_form" model="ir.ui.view">
             <field name="name">analytic.resource.plan.line.form</field>
             <field name="model">analytic.resource.plan.line</field>
@@ -26,20 +22,15 @@
                             <field name="product_id"/>
                             <field name="resource_type"/>
                             <field name="user_id" attrs="{'readonly':[('resource_type','=','procurement')]}"/>
-                            <!--<field name="unit_amount"/>-->
-                            <!--<field name="product_uom_id"/>-->
-                            <!--<field name="price_unit"/>-->
                         </group>
-                        <group colspan="3" col="4">
+                        <group name="name" colspan="3" col="4">
                             <h1>
                             <field name="name"/>
                             </h1>
                         </group>
-                        <group groups="analytic.group_analytic_accounting" col="4">
+                        <group name="analytic" groups="analytic.group_analytic_accounting" col="4">
                             <div>
                             <label for="unit_amount" class="oe_edit_only"/>
-                            <!--<label for="price_unit" class="oe_edit_only"/>-->
-                            <!--<label for="amount" class="oe_edit_only"/>-->
                             <h2>
                                 <field name="unit_amount" class="oe_inline"
                                        required="True"/>
@@ -60,7 +51,7 @@
                                 </h2>
                             </div>
                         </group>
-                        <group>
+                        <group name="account">
                             <field name="account_id"/>
                             <field name="date"/>
                         </group>
@@ -140,9 +131,11 @@
                                 domain="[]"
                                 context="{'group_by':'account_id'}"/>
                         <filter string="Product"
+                                name="product"
                                 domain="[]"
                                 context="{'group_by':'product_id'}"/>
                         <filter string="Status"
+                                name="status"
                                 domain="[]"
                                 context="{'group_by':'state'}"/>
                     </group>
@@ -173,7 +166,7 @@
         </record>
 
         <menuitem id="analytic_resource_plan_menu" name="Resource Plan"
-          parent="project.menu_projects"
+          parent="base.menu_main_pm"
           groups="project.group_project_manager"/>
 
         <menuitem groups="project.group_project_manager,project.group_project_user"

@@ -63,19 +63,20 @@ class AnalyticResourcePlanLine(models.Model):
                     self.request_state = 'draft'
             return True
 
-    requested_qty = fields.Float(compute=_requested_qty,
-                                 string='Requested quantity',
-                                 digits=dp.get_precision(
-                                 'Product Unit of Measure'),
-                                 readonly=True)
+    requested_qty = fields.Float(
+        compute=_requested_qty,
+        string='Requested quantity',
+        digits=dp.get_precision(
+        'Product Unit of Measure'),
+        readonly=True)
     request_state = fields.Selection(
             compute=_get_request_state, string='Request status',
             selection=_REQUEST_STATE,
             store=True,
             default='none')
-    purchase_request_lines=fields.Many2many(
+    purchase_request_lines = fields.Many2many(
             'purchase.request.line',
-            'Purchase Request Lines',
+            string ='Purchase Request Lines',
             readonly=True)
 
     @api.multi
@@ -90,7 +91,9 @@ class AnalyticResourcePlanLine(models.Model):
     @api.multi
     def action_button_confirm(self):
         res = super(AnalyticResourcePlanLine, self).action_button_confirm()
-
+        if self.qty_left > 0.0:
+            self._make_purchase_request()
+        return res
 
     @api.model
     def _prepare_purchase_request(self, line, company_id):
@@ -116,66 +119,65 @@ class AnalyticResourcePlanLine(models.Model):
     @api.multi
     def make_purchase_request(self):
         res = []
-        for make_purchase_request in self:
-            request_obj = self.env['purchase.request']
-            request_line_obj = self.env['purchase.request.line']
-            company_id = False
-            warehouse_id = False
-            request_id = False
-            for line in self.filtered(lambda t: t.qty_left > 0.0):
-                if line.state != 'confirm':
-                    raise ValidationError(
-                        _('All resource plan lines must be  '
-                          'confirmed.'))
-                if item.product_qty < 0.0:
-                    raise ValidationError(
-                        _('Enter a positive quantity.'))
-                line_company_id = line.account_id.company_id.id or False
-                if company_id is not False \
-                        and line_company_id != company_id:
-                    raise ValidationError(
-                        _('You have to select lines '
-                          'from the same company.'))
-                else:
-                    company_id = line_company_id
-                line_warehouse_id = line.account_id.warehouse_id.id or False
-                if warehouse_id is not False \
-                        and line_warehouse_id != warehouse_id:
-                    raise ValidationError(
-                        _('You have to select lines '
-                          'from the same warehouse.'))
-                else:
-                    warehouse_id = line_warehouse_id
+        request_obj = self.env['purchase.request']
+        request_line_obj = self.env['purchase.request.line']
+        company_id = False
+        warehouse_id = False
+        request_id = False
+        for line in self.filtered(lambda t: t.qty_left > 0.0):
+            if line.state != 'confirm':
+                raise ValidationError(
+                    _('All resource plan lines must be  '
+                      'confirmed.'))
+            if item.product_qty < 0.0:
+                raise ValidationError(
+                    _('Enter a positive quantity.'))
+            line_company_id = line.account_id.company_id.id or False
+            if company_id is not False \
+                    and line_company_id != company_id:
+                raise ValidationError(
+                    _('You have to select lines '
+                      'from the same company.'))
+            else:
+                company_id = line_company_id
+            line_warehouse_id = line.account_id.warehouse_id.id or False
+            if warehouse_id is not False \
+                    and line_warehouse_id != warehouse_id:
+                raise ValidationError(
+                    _('You have to select lines '
+                      'from the same warehouse.'))
+            else:
+                warehouse_id = line_warehouse_id
 
-                if request_id is False:
-                    request_data = self._prepare_purchase_request(
-                        line, company_id)
-                    request_id = request_obj.create(request_data)
-                request_line_data = self._prepare_purchase_request_line(
-                    request_id, line, qty)
-                request_line_id = request_line_obj.create(
-                    request_line_data)
-                values = {
-                    'purchase_request_lines': [(4, request_line_id)]
-                }
-                line.write(values)
-                project_manager_id = \
-                    line.account_id.user_id.partner_id.id or False
-                if project_manager_id:
-                    message_follower_ids = [x.id for x in
-                                            request_id.message_follower_ids]
-                    if project_manager_id not in message_follower_ids:
-                        request_id.write({
-                            'message_follower_ids': (4, project_manager_id)})
-                res.append(request_line_id)
-
-            return {
-                'domain': "[('id','in', ["+','.join(map(str, res))+"])]",
-                'name': _('Purchase Request Lines'),
-                'view_type': 'form',
-                'view_mode': 'tree,form',
-                'res_model': 'purchase.request.line',
-                'view_id': False,
-                'context': False,
-                'type': 'ir.actions.act_window'
+            if request_id is False:
+                request_data = self._prepare_purchase_request(
+                    line, company_id)
+                request_id = request_obj.create(request_data)
+            request_line_data = self._prepare_purchase_request_line(
+                request_id, line, qty)
+            request_line_id = request_line_obj.create(
+                request_line_data)
+            values = {
+                'purchase_request_lines': [(4, request_line_id)]
             }
+            line.write(values)
+            project_manager_id = \
+                line.account_id.user_id.partner_id.id or False
+            if project_manager_id:
+                message_follower_ids = [x.id for x in
+                                        request_id.message_follower_ids]
+                if project_manager_id not in message_follower_ids:
+                    request_id.write({
+                        'message_follower_ids': (4, project_manager_id)})
+            res.append(request_line_id)
+
+        return {
+            'domain': "[('id','in', ["+','.join(map(str, res))+"])]",
+            'name': _('Purchase Request Lines'),
+            'view_type': 'form',
+            'view_mode': 'tree,form',
+            'res_model': 'purchase.request.line',
+            'view_id': False,
+            'context': False,
+            'type': 'ir.actions.act_window'
+        }

@@ -56,8 +56,8 @@
                         domain="[('request_state', '=', 'none')]"
                         help="No purchase request has been created yet"/>
                 </group>
-                <filter string="Status" position="after">
-                        <filter string="Request Status"
+                <filter name="status" position="after">
+                        <filter name="status"
                                 domain="[]"
                                 context="{'group_by':'request_state'}"/>
                 </filter>

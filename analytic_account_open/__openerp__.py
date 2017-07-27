@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': 'git ',
+    'name': 'Analytic Account Open',
     'version': '9.0.1.0.0',
     'summary': 'Opens a single project/analytic account, or the whole WBS',
     'author':   'Eficent, '
@@ -21,5 +21,4 @@
         'wizards/analytic_account_open_view.xml',
     ],
     'installable': True,
-    'active': False,
 }

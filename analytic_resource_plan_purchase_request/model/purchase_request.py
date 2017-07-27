@@ -27,4 +27,4 @@ class PurchaseRequestLine(models.Model):
 
     analytic_resource_plan_lines = fields.Many2many(
         'analytic.resource.plan.line',
-        'Purchase Request Lines')
+        string='Analytic Planning Lines')

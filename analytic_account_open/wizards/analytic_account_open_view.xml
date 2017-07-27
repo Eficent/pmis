@@ -10,7 +10,7 @@
                            string="Select the analytic account"
                            col="4">
                         <field name="analytic_account_id"/>
-                        <!--<field name="include_child"/>-->
+                        <field name="include_child"/>
                     </group>
                     <footer>
                         <button name="analytic_account_open_window" string="Open" type="object" class="oe_highlight"/>
