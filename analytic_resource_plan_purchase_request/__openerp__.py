@@ -33,6 +33,7 @@
     'license': 'AGPL-3',
     'depends': [
         'analytic_resource_plan',
+        'analytic_resource_plan_stock_picking',
         'analytic_location',
         'purchase_request'
     ],

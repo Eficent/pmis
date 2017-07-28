@@ -154,6 +154,12 @@ class AnalyticResourcePlanLine(models.Model):
         general_account_id = (
             self.product_id.product_tmpl_id.property_account_expense_id.id
         )
+        if not journal_id:
+            raise UserError(
+                _(
+                    'There is no analytic plan journal for product %s'
+                ) % self.product_id.name
+            )
         if not general_account_id:
             general_account_id = (
                 self.product_id.categ_id.property_account_expense_categ_id.id
@@ -192,9 +198,6 @@ class AnalyticResourcePlanLine(models.Model):
             'notes': self.notes,
             'version_id': default_plan.id,
             'currency_id': self.account_id.company_id.currency_id.id,
-            # 'amount_currency': (
-            #     -1 * self.product_id.standard_price * self.unit_amount
-            # ),
         }]
 
     @api.model
@@ -203,7 +206,7 @@ class AnalyticResourcePlanLine(models.Model):
         line_plan_obj = self.env['account.analytic.line.plan']
         lines_vals = self._prepare_analytic_lines()
         for line_vals in lines_vals:
-            line = line_plan_obj.create(line_vals)
+            line_plan_obj.create(line_vals)
         return res
 
     @api.model
@@ -305,9 +308,9 @@ class AnalyticResourcePlanLine(models.Model):
     @api.constrains('resource_type', 'product_uom_id')
     def _check_description(self):
         for resource in self:
-            if self.resource_type == 'task' and (
-                        self.product_uom_id.category_id != (
-                            self.env.ref('product.uom_categ_wtime'))):
+            if resource.resource_type == 'task' and (
+                        resource.product_uom_id.category_id != (
+                            resource.env.ref('product.uom_categ_wtime'))):
                 raise ValidationError(_(
                     "When resource type is task, "
                     "the uom category should be time"))
