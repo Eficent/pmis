@@ -6,7 +6,7 @@
 from odoo import api, fields, models
 
 
-class account_analytic_account(models.Model):
+class AccountAnalyticAccount(models.Model):
 
     _inherit = "account.analytic.account"
 
@@ -22,4 +22,4 @@ class account_analytic_account(models.Model):
         self.ensure_one()
         default = dict(default or {})
         default['move_ids'] = []
-        return super(account_analytic_account, self).copy(default=default)
+        return super(AccountAnalyticAccount, self).copy(default=default)
