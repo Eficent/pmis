@@ -32,7 +32,6 @@ class AnalyticResourcePlanLine(models.Model):
         required=True,
         ondelete='cascade',
         index=True,
-        domain=[('type', '<>', 'view')],
         readonly=True,
         states={'draft': [('readonly', False)]}
     )
