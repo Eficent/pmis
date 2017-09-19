@@ -17,3 +17,15 @@ Create the resource plan lines and approve:
 
 * The system will fetch the products from stock is available
 * Purchase Request will be created when there's not enough qty in stock
+
+
+Credits
+=======
+
+Contributors
+------------
+
+* Jordi Ballester <jordi.ballester@eficent.com>
+* Aaron Henriquez <ahenriquez@eficent.com>
+* Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>
+
