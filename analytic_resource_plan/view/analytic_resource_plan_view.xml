@@ -87,7 +87,7 @@
         <field name="arch" type="xml">
             <tree string="Analytic resource plan line"
                   colors = "darkmagenta:has_child == True;blue:state=='draft'"
-                  editable="top">
+                  >
                 <field name="account_id"/>
                 <field name="date"/>
                 <field name="name" invisible="True"/>
