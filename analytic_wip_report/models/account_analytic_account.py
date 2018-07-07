@@ -4,7 +4,6 @@
 
 from odoo.addons import decimal_precision as dp
 from odoo import api, fields, models
-from odoo.exceptions import ValidationError
 
 
 class AccountAnalyticAccount(models.Model):
@@ -26,6 +25,7 @@ class AccountAnalyticAccount(models.Model):
             if context.get('to_date', False):
                 where_date += " AND l.date <= %s"
                 query_params += [context['to_date']]
+            # pylint: disable=sql-injection
             cr.execute(
                 """
                 SELECT amount, L.id
@@ -132,7 +132,7 @@ class AccountAnalyticAccount(models.Model):
                 (6, 0, [l for l in total_estimated_cost_line_ids])]
             # Estimated costs to complete
             account.estimated_costs_to_complete = (
-                    account.total_estimated_costs - account.actual_costs)
+                account.total_estimated_costs - account.actual_costs)
 
             # Estimated gross profit
             account.estimated_gross_profit = (
@@ -278,10 +278,10 @@ class AccountAnalyticAccount(models.Model):
         string='Detail',
     )
     total_value_line_ids = fields.Many2many(
-            comodel_name="account.analytic.line.plan",
-            compute='_compute_wip_report',
-            string='Detail',
-        )
+        comodel_name="account.analytic.line.plan",
+        compute='_compute_wip_report',
+        string='Detail',
+    )
 
     @api.multi
     def action_open_analytic_lines(self):
@@ -290,7 +290,7 @@ class AccountAnalyticAccount(models.Model):
         res = self.env['ir.actions.act_window'].for_xml_id(
             'analytic', 'account_analytic_line_action_entries')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
 
     @api.multi
@@ -300,7 +300,7 @@ class AccountAnalyticAccount(models.Model):
         res = self.env['ir.actions.act_window'].for_xml_id(
             'analytic', 'account_analytic_line_action_entries')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
 
     @api.multi
@@ -310,7 +310,7 @@ class AccountAnalyticAccount(models.Model):
         res = self.env['ir.actions.act_window'].for_xml_id(
             'analytic', 'account_analytic_line_action_entries')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
 
     @api.multi
@@ -321,9 +321,9 @@ class AccountAnalyticAccount(models.Model):
         line = self
         bill_lines = [x.id for x in line.actual_labor_line_ids]
         res = self.env['ir.actions.act_window'].for_xml_id(
-           'analytic', 'account_analytic_line_action_entries')
+            'analytic', 'account_analytic_line_action_entries')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
 
     @api.multi
@@ -333,7 +333,7 @@ class AccountAnalyticAccount(models.Model):
         res = self.env['ir.actions.act_window'].for_xml_id(
             'analytic_plan', 'action_account_analytic_line_plan_form')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
 
     @api.multi
@@ -343,6 +343,5 @@ class AccountAnalyticAccount(models.Model):
         res = self.env['ir.actions.act_window'].for_xml_id(
             'analytic_plan', 'action_account_analytic_line_plan_form')
         res['domain'] = "[('id', 'in', ["+','.join(
-                    map(str, bill_lines))+"])]"
+            map(str, bill_lines))+"])]"
         return res
-

@@ -3,8 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import time
-from odoo import api, fields, models
-from odoo.tools.translate import _
+from odoo import _, api, fields, models
 from odoo.exceptions import Warning
 from odoo.exceptions import ValidationError
 
@@ -275,8 +274,8 @@ class AnalyticResourcePlanLine(models.Model):
     def unlink(self):
         for line in self:
             if line.analytic_line_plan_ids:
-                raise Warning(_('''You cannot delete a record that refers to
-                    analytic plan lines!'''))
+                raise Warning(_('You cannot delete a record that refers to '
+                                'analytic plan lines'))
         return super(AnalyticResourcePlanLine, self).unlink()
 
     # PRICE DEFINITIONS
@@ -309,8 +308,8 @@ class AnalyticResourcePlanLine(models.Model):
             if resource.resource_type == 'task' and (
                 resource.product_uom_id.category_id != (
                     resource.env.ref('product.uom_categ_wtime'))):
-                raise ValidationError(_("""When resource type is task,
-                    the uom category should be time"""))
+                raise ValidationError(_("When resource type is task, "
+                                        "the uom category should be time"))
 
     @api.multi
     def action_open_view_rpl_form(self):

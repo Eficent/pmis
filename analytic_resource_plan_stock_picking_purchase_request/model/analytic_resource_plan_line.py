@@ -3,9 +3,7 @@
 #   (http://www.eficent.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import _, api, fields, models
-import odoo.addons.decimal_precision as dp
-from odoo.exceptions import ValidationError
+from odoo import api, models
 
 
 class AnalyticResourcePlanLine(models.Model):
@@ -22,7 +20,8 @@ class AnalyticResourcePlanLine(models.Model):
     def _make_purchase_request(self):
         res = {}
         for line in self:
-            if line.qty_left <= 0:
+            line._compute_qty_left()
+            if line.qty_left <= 0.0:
                 continue
             else:
                 res = super(AnalyticResourcePlanLine, line).\

@@ -15,7 +15,10 @@ Usage
 
 * Go to 'Accounting / Configuration / Analytic Accounting' and select menu
   entry 'Open Analytic Account'.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47b5d04143065bd831672a7eb31afbdb61a51d8e
 
 Installation
 ============
